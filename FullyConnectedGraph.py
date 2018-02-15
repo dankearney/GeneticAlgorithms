@@ -18,9 +18,9 @@ class FullyConnectedGraph:
                 if i==j: continue
                 self.G.add_edge(i, j, distance=random.randrange(self.min_distance, self.max_distance), highlighted= False)
 
-    def plot(self):
+    def plot(self, title = ''):
         plotter = GraphPlotter(self.G)
-        plotter.plot()
+        plotter.plot(title)
 
     def nodes(self):
         return self.G.nodes
