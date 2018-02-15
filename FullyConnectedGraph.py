@@ -16,11 +16,32 @@ class FullyConnectedGraph:
         for i in range(self.num_nodes):
             for j in range(self.num_nodes):
                 if i==j: continue
-                self.G.add_edge(i, j, distance=random.randrange(self.min_distance, self.max_distance))
+                self.G.add_edge(i, j, distance=random.randrange(self.min_distance, self.max_distance), highlighted= False)
 
     def plot(self):
         plotter = GraphPlotter(self.G)
         plotter.plot()
 
-G = FullyConnectedGraph(num_nodes=10)
-G.plot()
+    def nodes(self):
+        return self.G.nodes
+
+    def edges(self):
+        return self.G.edges
+
+    def connected_edges(self, node_index):
+        return self.G.edges(node_index, data=False)
+
+    def dist_between(self, node_index_a, node_index_b):
+        for a, b, data in self.G.edges(node_index_a, data=True):
+            if b == node_index_b:
+                return data['distance']
+
+    def measure_solution_fitness(self, solution):
+        total_dist = 0
+        for i in range(1, len(solution)):
+            dist = self.dist_between(solution.get(i-1), solution.get(i))
+            total_dist += dist
+        return total_dist
+
+    def __repr__(self):
+        return "Nodes: " + str(self.nodes()) + "\r\nEdges: " + str(self.edges())
