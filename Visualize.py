@@ -1,8 +1,12 @@
-from networkx import *
+import networkx as nx
+import matplotlib.pyplot as plt
 
-# plain graph
+# WARNING! You need a window manager like Ximg
+import subprocess
+subprocess.call("export DISPLAY=:0", shell=True)
 
-G=complete_graph(5)   # start with K5 in networkx
-A=to_agraph(G)        # convert to a graphviz graph
-A.layout()            # neato layout
-A.draw("k5.ps")       # write postscript in k5.ps with neato layout
+G=nx.Graph()
+G.add_nodes_from([2,3])
+G.add_edge(2, 3, weight=107)
+nx.draw(G)
+plt.show()
