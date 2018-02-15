@@ -2,12 +2,11 @@ from  FullyConnectedGraph import *
 from Solution import *
 
 from random import shuffle
-N = 4
+N = 7
 
 G = FullyConnectedGraph(num_nodes = N)
-base = range(1, N)
+base = range(N)
 shuffle(base)
-base = [0] + base + [0]
 solution = Solution(base)
 print solution
 
