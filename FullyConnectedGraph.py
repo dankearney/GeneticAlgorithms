@@ -2,6 +2,8 @@ import networkx as nx
 import random
 import string
 from GraphPlotter import GraphPlotter
+import itertools
+from Solution import *
 
 class FullyConnectedGraph:
 
@@ -49,6 +51,17 @@ class FullyConnectedGraph:
             a = solution.get(i)
             b = solution.get((i+1)%len(solution))
             self.set_highlighted(a, b)
+
+    def find_brute_force_solution(self):
+        best_solution = None
+        best_solution_value = float("inf")
+        for sol_list in list(itertools.permutations(range(self.num_nodes))):
+            solution = Solution(sol_list)
+            fitness_value = self.measure_solution_fitness(solution)
+            if fitness_value < best_solution_value:
+                best_solution = solution
+                best_solution_value = fitness_value
+        return best_solution, best_solution_value
 
     def __repr__(self):
         return "Nodes: " + str(self.nodes()) + "\r\nEdges: " + str(self.edges())
