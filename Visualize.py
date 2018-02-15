@@ -1,13 +1,16 @@
 import networkx as nx
 import matplotlib.pyplot as plt
 import random
+import string
+
+N = 5
 
 G=nx.Graph()
-G.add_nodes_from(range(10))
-for i in range(10):
-    for j in range(10):
+G.add_nodes_from(range(N))
+for i in range(N):
+    for j in range(N):
         if i==j: continue
-        G.add_edge(i, j, distance=random.randrange(100, 1000))
+        G.add_edge(i, j, distance=random.randrange(100, 200))
 
 try:
     pos = nx.kamada_kawai_layout(G, weight='distance')
