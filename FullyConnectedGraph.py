@@ -32,9 +32,7 @@ class FullyConnectedGraph:
         return self.G.edges(node_index, data=False)
 
     def dist_between(self, node_index_a, node_index_b):
-        for a, b, data in self.G.edges(node_index_a, data=True):
-            if b == node_index_b:
-                return data['distance']
+        return self.G[node_index_a][node_index_b]['distance']
 
     def measure_solution_fitness(self, solution):
         total_dist = 0
@@ -42,6 +40,16 @@ class FullyConnectedGraph:
             dist = self.dist_between(solution.get(i-1), solution.get(i))
             total_dist += dist
         return total_dist
+
+    def set_highlighted(self, node_index_a, node_index_b):
+        self.G[node_index_a][node_index_b]['highlighted'] = True
+
+    def highlight_solution(self, solution):
+        for i in range(1, len(solution)):
+            a = solution.get(i)
+            b = solution.get(i-1)
+            self.set_highlighted(a, b)
+
 
     def __repr__(self):
         return "Nodes: " + str(self.nodes()) + "\r\nEdges: " + str(self.edges())
