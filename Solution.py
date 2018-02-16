@@ -6,16 +6,17 @@ class Solution:
 		self.fitness = None
 
 	def compute_fitness(self, graph):
-		self.fitness = g.measure_solution_fitness(self)
+		self.fitness = graph.measure_solution_fitness(self)
 		return self.fitness
 
+	# Certain solutions produced at various points of the algorithm are invalid.
 	# If a mutation or crossing-over causes a node to be visited twice
 	# or a node to not be visited, we need to clean it up
 	def clean(self):
-		# Identify any missing nodes
+		# Identify any missing nodes in current array
 		difference = set(range(len(self.arr))) - set(self.arr)
 		
-		# No differences? Great!
+		# No differences between the two? Great!
 		if len(difference) == 0:
 			return
 

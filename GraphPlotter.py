@@ -12,7 +12,7 @@ class GraphPlotter:
             pos = nx.kamada_kawai_layout(self.G, weight='distance')
             nx.draw_networkx_nodes(self.G, pos, node_color='cornflowerblue')
             nx.draw_networkx_labels(self.G, pos, self.G.graph['labelDict'])
-            nx.draw_networkx_edges(self.G, pos, edge_color=['blue' if d['highlighted'] else 'gray' for u,v,d in self.G.edges(data=True)])
+            nx.draw_networkx_edges(self.G, pos, edge_color=[d['color'] if d['color'] != '' else 'aliceblue' for u,v,d in self.G.edges(data=True)])
             edge_labels = nx.get_edge_attributes(self.G,'distance')
             nx.draw_networkx_edge_labels(self.G, pos, edge_labels=edge_labels, rotate=False)
             plt.title(title)
