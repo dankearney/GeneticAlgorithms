@@ -1,4 +1,3 @@
-import networkx as nx
 import random
 import string
 from GraphPlotter import GraphPlotter
@@ -7,18 +6,15 @@ from Solution import *
 
 class FullyConnectedGraph:
 
-    def __init__(self, num_nodes=5, min_distance=100, max_distance=500):
-        self.num_nodes = num_nodes
-        self.min_distance = min_distance
-        self.max_distance = max_distance
-        self.G=nx.Graph(labelDict={})
-        for i in range(self.num_nodes):
-            self.G.add_node(i)
-            self.G.graph['labelDict'][i] = string.ascii_letters[i]
-        for i in range(self.num_nodes):
-            for j in range(self.num_nodes):
-                if i==j: continue
-                self.G.add_edge(i, j, distance=random.randrange(self.min_distance, self.max_distance), color= '')
+    # Realized a major issue.
+    # A graph where each node is roughly the same distance from every other node is not a difficult problem to solve.
+    # Any random path is about as good as any other path.
+    # So, 
+
+    # TODO: Build real world datasource!
+    def __init__(self, nodes=[(0,0), (10, 10), (5,5), (5, 0), (10, 0)]):
+        self.nodes = nodes
+        self.num_nodes = len(self.nodes)
 
     def plot(self, title = ''):
         plotter = GraphPlotter(self.G)
@@ -27,14 +23,8 @@ class FullyConnectedGraph:
     def nodes(self):
         return self.G.nodes
 
-    def edges(self):
-        return self.G.edges
-
-    def connected_edges(self, node_index):
-        return self.G.edges(node_index, data=False)
-
-    def dist_between(self, node_index_a, node_index_b):
-        return self.G[node_index_a][node_index_b]['distance']
+    def dist_between(self, index_1, index_2):
+        return ((self.nodes[index_1][0] - self.nodes[index_2][0])**2 + (self.nodes[index_1][1] - self.nodes[index_2][1])**2)**.5
 
     def measure_solution_fitness(self, solution):
         total_dist = 0
@@ -42,15 +32,6 @@ class FullyConnectedGraph:
             dist = self.dist_between(solution.get(i), solution.get((i+1) % len(solution)))
             total_dist += dist
         return total_dist
-
-    def set_color(self, node_index_a, node_index_b, color):
-        self.G[node_index_a][node_index_b]['color'] = color
-
-    def highlight_solution(self, solution, color):
-        for i in range(0, len(solution)):
-            a = solution.get(i)
-            b = solution.get((i+1)%len(solution))
-            self.set_color(a, b, color)
 
     def find_brute_force_solution(self):
         best_solution = None
