@@ -9,7 +9,7 @@ random_nodes = [(random.random(), random.random()) for i in range(N)]
 
 G = FullyConnectedGraph(random_nodes)
 
-ga = GeneticAlgorithm(G, num_chromosomes = 1000, depth=10)
+ga = GeneticAlgorithm(G, num_chromosomes = 500, depth=500)
 winner = ga.run()
 
 # G.plot(solution=solution)
