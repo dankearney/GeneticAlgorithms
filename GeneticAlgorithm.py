@@ -28,25 +28,34 @@ class GeneticAlgorithm:
 		self.cross_over()
 		self.mutate()
 		self.current_generation = self.next_generation
-		self.next_generation = []
 	
 	def cross_over(self):
 		for i in range(0, len(self.next_generation), 2):
-			if random.random() > .9: continue
+			if random.random() > .99: continue
 			mom = self.next_generation[i]
 			dad = self.next_generation[i+1]
+			newmom = Solution([-1 for i in range(self.graph.num_nodes)], self.graph)
+			newdad = Solution([-1 for i in range(self.graph.num_nodes)], self.graph)
 			crossover_point_start = random.randrange(0, self.graph.num_nodes)
 			crossover_point_end = random.randrange(crossover_point_start, self.graph.num_nodes)
 			for j in range(crossover_point_start, crossover_point_end):
-				temp = mom.get(j)
-				mom.set(j, dad.get(j))
-				dad.set(j, temp)
-			mom.clean()
-			dad.clean()
+				newmom.set(j, mom.get(j))
+				newdad.set(j, dad.get(j))
+
+			momslice = set(newmom.arr[crossover_point_start:crossover_point_end])
+			dadslice = set(newdad.arr[crossover_point_start:crossover_point_end])
+
+			for k in range(self.graph.num_nodes):
+				if mom.get(k) not in momslice:
+					newmom.set(k, mom.get(k))
+				if dad.get(k) not in dadslice:
+					newdad.set(k, dad.get(k))
+			self.next_generation[i] = newmom
+			self.next_generation[i+1] = newdad
 
 	def mutate(self):
 		for solution in self.next_generation:
-			if random.random() < .04: # Mutate 10% of the time
+			if random.random() < .02: # Mutate 10% of the time
 				index_a = random.randrange(0, self.graph.num_nodes)
 				index_b = random.randrange(0, self.graph.num_nodes)
 				val_a = solution.get(index_a)
@@ -58,9 +67,9 @@ class GeneticAlgorithm:
 	def select_next_generation(self):
 		self.next_generation = [self.determine_winner()]
 		while len(self.next_generation) < len(self.current_generation):
-			sample = [random.choice(self.current_generation) for i in range(10)]
+			sample = [random.choice(self.current_generation) for i in range(5)]
 			[solution.compute_fitness() for solution in sample]
-			sample.sort(key = lambda x: x.fitness)
+			sample.sort(key = lambda x: x.compute_fitness())
 			self.next_generation.append(sample[0])
 
 	def determine_winner(self):
