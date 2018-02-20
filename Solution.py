@@ -36,7 +36,7 @@ class Solution:
 		return self.arr[i]
 
 	def __repr__(self):
-		return str(self.arr)
+		return str(self.arr) + ", fitness: " + str(self.compute_fitness())
 
 	def __len__(self):
 		return len(self.arr)

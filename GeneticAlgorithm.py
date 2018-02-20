@@ -14,6 +14,7 @@ class GeneticAlgorithm:
 		self.generate_first_solutions()
 		for i in range(self.depth):
 			self.generate_next_generation()
+			print self.determine_winner().fitness
 		return self.determine_winner()
 
 	def generate_first_solutions(self):
@@ -23,24 +24,37 @@ class GeneticAlgorithm:
 			self.current_generation.append(Solution(arr, self.graph))
 
 	def generate_next_generation(self):
-		self.select_next_generation_parents()
+		self.select_next_generation()
 		self.cross_over()
 		self.mutate()
-		self.clean()
 		self.current_generation = self.next_generation
 		self.next_generation = []
 	
 	def cross_over(self):
-		pass
+		for i in range(0, len(self.next_generation), 2):
+			mom = self.next_generation[i]
+			dad = self.next_generation[i+1]
+			crossover_point_start = random.randrange(0, self.graph.num_nodes)
+			crossover_point_end = random.randrange(crossover_point_start, self.graph.num_nodes)
+			for j in range(crossover_point_start, crossover_point_end):
+				temp = mom.get(j)
+				mom.set(j, dad.get(j))
+				mom.set(j, temp)
+			mom.clean()
+			dad.clean()
 
 	def mutate(self):
-		pass
-
-	def clean(self):
 		for solution in self.next_generation:
-			solution.clean()
+			if random.random() < .50: # Mutate 10% of the time
+				index_a = random.randrange(0, self.graph.num_nodes)
+				index_b = random.randrange(0, self.graph.num_nodes)
+				val_a = solution.get(index_a)
+				val_b = solution.get(index_b)
+				solution.set(index_a, val_b)
+				solution.set(index_b, val_a)
 
-	def select_next_generation_parents(self):
+
+	def select_next_generation(self):
 		total_fitness_sum = 0
 		# First, compute all of the fitnesses.
 		for solution in self.current_generation:
@@ -49,30 +63,37 @@ class GeneticAlgorithm:
 
 		# Now, sort solutions by fitness
 		self.current_generation.sort(key = lambda x: x.fitness)
+
 		self.next_generation = []
+
+		old_fitness = 0
+		for solution in self.current_generation:
+			old_fitness += solution.compute_fitness()
 
 		while len(self.next_generation) < len(self.current_generation):
 			self.next_generation.append(self.weighted_select(self.current_generation))
 
-	def weighted_select(self, arr):
-		favor = .05
+		new_fitness = 0
+		for solution in self.next_generation:
+			new_fitness += solution.compute_fitness()
 
-		if len(arr) < 1/favor:
-			return random.choice(arr)
+		# print self.next_generation
+		# print self.current_generation
+
+		# print 'new ', new_fitness, ' old ', old_fitness
+
+
+
+	# Fittest top 20% are allowed into next gen
+	def weighted_select(self, arr):
+		favor = .50
 
 		front = arr[0:int(len(arr) * favor) ]
-		back = arr[int(len(arr)* favor) :]
+		return random.choice(front)
 
-		# 50/50, it's in the top favor%
-		coinflip = random.random()
-		if coinflip < .5:
-			return random.choice(front)
-		
-		# Otherwise, 50/50 it's in the top favor% of the bottom 90%
-		else:
-			return self.weighted_select(back)
 
 	def determine_winner(self):
+		[solution.compute_fitness for solution in self.current_generation]
 		self.current_generation.sort(key = lambda x: x.fitness)
 		return self.current_generation[0]
 

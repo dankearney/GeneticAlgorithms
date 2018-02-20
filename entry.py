@@ -5,13 +5,11 @@ from Solution import *
 from random import shuffle
 N = 50
 
-random_nodes = [(random.random()*100, random.random()*100) for i in range(N)]
+random_nodes = [(random.random(), random.random()) for i in range(N)]
 
 G = FullyConnectedGraph(random_nodes)
 
-solution = Solution(shuffle(range(G.num_nodes)), G)
-
-ga = GeneticAlgorithm(G, num_chromosomes = 10000, depth=10)
+ga = GeneticAlgorithm(G, num_chromosomes = 1000, depth=10)
 winner = ga.run()
 
 # G.plot(solution=solution)
