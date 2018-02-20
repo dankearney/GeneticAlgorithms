@@ -1,12 +1,13 @@
 class Solution:
 
-	def __init__(self, arr):
+	def __init__(self, arr, graph):
 		self.arr = arr
 		self.arr
+		self.graph = graph
 		self.fitness = None
 
-	def compute_fitness(self, graph):
-		self.fitness = graph.measure_solution_fitness(self)
+	def compute_fitness(self):
+		self.fitness = self.graph.measure_solution_fitness(self)
 		return self.fitness
 
 	# Certain solutions produced at various points of the algorithm are invalid.
@@ -27,6 +28,9 @@ class Solution:
 			if element in seen:
 				self.arr[i] =  difference.pop()
 			seen.add(element)
+
+	def set(self, i, val):
+		self.arr[i] = val
 
 	def get(self, i):
 		return self.arr[i]
