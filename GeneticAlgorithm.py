@@ -23,34 +23,57 @@ class GeneticAlgorithm:
 			self.current_generation.append(Solution(arr, self.graph))
 
 	def generate_next_generation(self):
+		print 'Beginning generation: ', self.current_generation
 		self.select_next_generation()
+		print 'Parents ', self.next_generation
 		self.cross_over()
+		print 'Crossed over ', self.next_generation
 		self.mutate()
+		print 'Mutated ', self.next_generation
 		self.current_generation = self.next_generation
 	
 	def cross_over(self):
 		for i in range(0, len(self.next_generation), 2):
-			if random.random() > 1: continue
-			mom = self.next_generation[i]
-			dad = self.next_generation[i+1]
-			newmom = Solution([-1 for i in range(self.graph.num_nodes)], self.graph)
-			newdad = Solution([-1 for i in range(self.graph.num_nodes)], self.graph)
-			crossover_point_start = random.randrange(0, self.graph.num_nodes)
-			crossover_point_end = random.randrange(crossover_point_start, self.graph.num_nodes)
-			for j in range(crossover_point_start, crossover_point_end):
-				newmom.set(j, mom.get(j))
-				newdad.set(j, dad.get(j))
 
-			momslice = set(newmom.arr[crossover_point_start:crossover_point_end])
-			dadslice = set(newdad.arr[crossover_point_start:crossover_point_end])
+			mom, dad = self.next_generation[i].arr, self.next_generation[i+1].arr
 
-			for k in range(self.graph.num_nodes):
-				if mom.get(k) not in momslice:
-					newmom.set(k, mom.get(k))
-				if dad.get(k) not in dadslice:
-					newdad.set(k, dad.get(k))
-			self.next_generation[i] = newmom
-			self.next_generation[i+1] = newdad
+			# First pick the elements from mom to cross over
+			crossover_points = sorted([random.randrange(0, self.graph.num_nodes) for j in range(2)])
+			mom_crossover = mom[crossover_points[0]:crossover_points[1]]
+			
+			# Now push the crossover into dad's array
+			newdad = [None] * self.graph.num_nodes
+			newdad[crossover_points[0]:crossover_points[1]] = mom_crossover
+
+ 			# Fill in the rest of dad's array maintaining order
+ 			k = 0
+ 			# j is the index to place the element
+ 			# k is the element from the old array
+ 			for i in range(self.graph.num_nodes):
+ 				item = dad[i]
+ 				if item in newdad:
+ 					k += 1
+ 					continue
+ 				else:
+ 					newdad[i-k] = item
+
+			# # Now pick dad's elements to cross over
+			# crossover_points = sorted([random.randrange(0, self.graph.num_nodes) for j in range(2)])
+			# dad_crossover = dad[crossover_points[0]:crossover_points[1]]
+			
+			# # Now push the crossover into mom's array
+			# newmom = [None] * self.graph.num_nodes
+			# newmom[crossover_points[0]:crossover_points[1]] = dad_crossover
+
+ 		# 	# Fill in the rest of mom's array maintaining order
+ 		# 	for j in range(self.graph.num_nodes):
+ 		# 		if mom[j] not in dad_crossover:
+ 		# 			newmom[j] = mom[j]
+
+ 			print 'newdad: ', newdad
+
+			self.next_generation[i] = Solution(newdad, self.graph)
+			self.next_generation[i+1] = Solution(newdad, self.graph)
 
 	def mutate(self):
 		for solution in self.next_generation:
@@ -62,8 +85,9 @@ class GeneticAlgorithm:
 				solution.set(index_a, val_b)
 				solution.set(index_b, val_a)
 
-
 	def select_next_generation(self):
+		self.next_generation = self.current_generation
+		return
 		self.next_generation = [self.determine_winner()]
 		print self.next_generation[0].fitness
 		while len(self.next_generation) < len(self.current_generation):
