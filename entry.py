@@ -3,25 +3,22 @@ from GeneticAlgorithm import *
 from Solution import *
 
 from random import shuffle
-N = 25
+N = 50
 
 random_nodes = [(random.random(), random.random()) for i in range(N)]
 
 G = FullyConnectedGraph(random_nodes)
 
-# ga = GeneticAlgorithm(G, num_chromosomes = 100, depth=5000)
-# winner = ga.run()
+ga = GeneticAlgorithm(G, num_chromosomes = 100, depth=100)
+winner = ga.run()
 # print winner
 
-# G.plot(solution=solution)
+G.plot(solution=winner)
 # winner = ga.run()
 # brute_force_sol = G.find_brute_force_solution()
 # print brute_force_sol
 
-arr = range(N)
-random.shuffle(arr)
-
-G.plot(solution=Solution(arr, G))
+# G.plot(solution=Solution(arr, G))
 
 
 # print "Winner", winner, winner.compute_fitness(G)

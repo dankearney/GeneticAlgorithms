@@ -14,7 +14,6 @@ class GeneticAlgorithm:
 		self.generate_first_solutions()
 		for i in range(self.depth):
 			self.generate_next_generation()
-			print self.determine_winner().fitness
 		return self.determine_winner()
 
 	def generate_first_solutions(self):
@@ -31,7 +30,7 @@ class GeneticAlgorithm:
 	
 	def cross_over(self):
 		for i in range(0, len(self.next_generation), 2):
-			if random.random() > .99: continue
+			if random.random() > 1: continue
 			mom = self.next_generation[i]
 			dad = self.next_generation[i+1]
 			newmom = Solution([-1 for i in range(self.graph.num_nodes)], self.graph)
@@ -66,9 +65,9 @@ class GeneticAlgorithm:
 
 	def select_next_generation(self):
 		self.next_generation = [self.determine_winner()]
+		print self.next_generation[0].fitness
 		while len(self.next_generation) < len(self.current_generation):
-			sample = [random.choice(self.current_generation) for i in range(5)]
-			[solution.compute_fitness() for solution in sample]
+			sample = [random.choice(self.current_generation) for i in range(10)]
 			sample.sort(key = lambda x: x.compute_fitness())
 			self.next_generation.append(sample[0])
 
