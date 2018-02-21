@@ -11,11 +11,10 @@ class FullyConnectedGraph:
     def __init__(self, nodes=[(0,0), (10, 10), (5,5), (5, 0), (10, 0)]):
         self.nodes = nodes
         self.num_nodes = len(self.nodes)
+        self.plotter = GraphPlotter(self)
 
     def plot(self, solution=None, title = ''):
-        plotter = GraphPlotter(self)
-        if solution != None: plotter.add_edges(solution)
-        plotter.plot(title)
+        self.plotter.plot(title, solution)
 
     def get_node_xy(self, i):
         return self.nodes[i]
