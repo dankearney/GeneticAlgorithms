@@ -70,7 +70,7 @@ class GeneticAlgorithm:
 	def mutate(self):
 		for solution in self.next_generation:
 			for j in range(self.graph.num_nodes):
-				if random.random() < .01:
+				if random.random() < (1. / self.graph.num_nodes): # Approximately once per chromosome
 					index_a = random.randrange(0, self.graph.num_nodes)
 					index_b = random.randrange(0, self.graph.num_nodes)
 					val_a = solution.get(index_a)
