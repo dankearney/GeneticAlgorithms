@@ -21,15 +21,13 @@ class GraphPlotter:
 
     def plot(self, title='', solution=None):
         try:
-            self.G = nx.Graph()
+            self.G = nx.Graph() # Little hack to clear the old graph
             self.populate_networkx_graph_nodes()
             if solution != None:
                 self.add_edges(solution)
-
             plt.clf()
             pos=nx.get_node_attributes(self.G, 'xy')
-
-            nx.draw(self.G, pos=pos, with_labels=True)
+            nx.draw(self.G, pos=pos)
             plt.title(title)
             print title
             plt.ion()

@@ -3,13 +3,13 @@ from GeneticAlgorithm import *
 from Solution import *
 
 from random import shuffle
-N = 50
+N = 25
 
 random_nodes = [(random.random(), random.random()) for i in range(N)]
 
 G = FullyConnectedGraph(random_nodes)
 
-ga = GeneticAlgorithm(G, num_chromosomes = 100, depth=100)
+ga = GeneticAlgorithm(G, num_chromosomes = 100, depth=1000)
 winner = ga.run()
 # print winner
 
