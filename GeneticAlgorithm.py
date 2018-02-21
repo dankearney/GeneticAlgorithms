@@ -16,9 +16,9 @@ class GeneticAlgorithm:
 	def run(self):
 		self.generate_random_solutions()
 		for i in range(self.depth):
-			self.step()
 			winner = self.determine_winner()
 			self.graph.plot(winner, title=str(winner.fitness))
+			self.step()
 		return self.determine_winner()
 
 	def generate_random_solutions(self):
@@ -88,7 +88,7 @@ class GeneticAlgorithm:
 		for solution in self.current_generation:
 			solution.compute_fitness()
 		while len(self.next_generation) < len(self.current_generation):
-			sample = [random.choice(self.current_generation) for i in range(10)]
+			sample = [random.choice(self.current_generation) for i in range(5)]
 			sample.sort(key = lambda x: x.fitness)
 			self.next_generation.append(sample[0])
 
