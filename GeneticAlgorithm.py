@@ -172,7 +172,7 @@ class GeneticAlgorithm:
 	def mutate(self):
 		for solution in self.next_generation:
 			for j in range(self.graph.num_nodes):
-				if random.random() < .01: # Each chromosome has a 1
+				if random.random() < .015: # Each gene has a chance of mutation
 					index_a = random.randrange(0, self.graph.num_nodes)
 					index_b = random.randrange(0, self.graph.num_nodes)
 					val_a = solution.get(index_a)
@@ -190,7 +190,7 @@ class GeneticAlgorithm:
 		for solution in self.current_generation:
 			solution.compute_fitness()
 		while len(self.next_generation) < len(self.current_generation):
-			sample = [random.choice(self.current_generation) for i in range(5)]
+			sample = [random.choice(self.current_generation) for i in range(10)] 
 			sample.sort(key = lambda x: x.fitness)
 			self.next_generation.append(sample[0])
 
