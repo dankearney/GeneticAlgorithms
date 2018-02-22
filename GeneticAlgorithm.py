@@ -9,6 +9,8 @@ class GeneticAlgorithm:
 	def __init__(self, graph, depth=100, num_chromosomes=100):
 		self.graph = graph
 		self.num_chromosomes = num_chromosomes	
+		if self.num_chromosomes < 50:
+			raise ArgumentException, 'Must have at least 50 chromosomes' 
 		self.depth = depth
 		self.current_generation = []
 		self.next_generation = []
@@ -36,9 +38,10 @@ class GeneticAlgorithm:
 	# User ordered crossover to mix parent pairs.
 	def cross_over(self):
 		for i in range(0, len(self.next_generation), 2):
-			mom, dad = self.next_generation[i].arr, self.next_generation[i+1].arr
-			self.next_generation[i]   = Solution(self.cross_merge_arr(mom, dad), self.graph)
-			self.next_generation[i+1] = Solution(self.cross_merge_arr(dad, mom), self.graph)
+			if random.random() < .9: 
+				mom, dad = self.next_generation[i].arr, self.next_generation[i+1].arr
+				self.next_generation[i]   = Solution(self.cross_merge_arr(mom, dad), self.graph)
+				self.next_generation[i+1] = Solution(self.cross_merge_arr(dad, mom), self.graph)
 
 	# Uses ordered crossover to cross two solutions.
 	# Take a random chunk of the solution 1.
@@ -47,13 +50,15 @@ class GeneticAlgorithm:
 	# Being careful not to duplicate entries.
 	def cross_merge_arr(self, parent1, parent2):
 		# First pick the elements to cross over from parent1
-		crossover_points = sorted([random.randrange(0, self.graph.num_nodes) for j in range(2)])
-		crossover = parent1[crossover_points[0]:crossover_points[1]]
+		crossover_point_1 = random.randrange(0, self.graph.num_nodes)
+		length = self.graph.num_nodes / 2 # Cap the crossover at half the chromosome
+		crossover_point_2 = random.randrange(crossover_point_1, crossover_point_1 + length)
+		crossover = parent1[crossover_point_1:crossover_point_2]
 		crossover_set = set(crossover) # for faster lookups
 		
 		# Now push the crossover into output array at the same indices
 		out_arr = [None] * self.graph.num_nodes
-		out_arr[crossover_points[0]:crossover_points[1]] = crossover
+		out_arr[crossover_point_1:crossover_point_2] = crossover
 
 		# Fill in the rest of output array from parent2, maintaining order
 		placement_index = 0
@@ -69,14 +74,13 @@ class GeneticAlgorithm:
 	# Swapping maintains the solution integrity.
 	def mutate(self):
 		for solution in self.next_generation:
-			for j in range(self.graph.num_nodes):
-				if random.random() < (1. / self.graph.num_nodes): # Approximately once per chromosome
-					index_a = random.randrange(0, self.graph.num_nodes)
-					index_b = random.randrange(0, self.graph.num_nodes)
-					val_a = solution.get(index_a)
-					val_b = solution.get(index_b)
-					solution.set(index_a, val_b)
-					solution.set(index_b, val_a)
+			if random.random() < .3: 
+				index_a = random.randrange(0, self.graph.num_nodes)
+				index_b = random.randrange(0, self.graph.num_nodes)
+				val_a = solution.get(index_a)
+				val_b = solution.get(index_b)
+				solution.set(index_a, val_b)
+				solution.set(index_b, val_a)
 
 	# Use a "tournament select" to choose winning parents.
 	# For our cases, we want to weight our next gen towards the best performers.
@@ -84,17 +88,15 @@ class GeneticAlgorithm:
 	# More efficient to pre-compute the fitnesses since we can't really get much around
 	# computing N fitnesses.
 	def select_parents(self):
-		self.next_generation = [] # self.determine_winner
-		for solution in self.current_generation:
-			solution.compute_fitness()
+		self.next_generation = [ self.determine_winner() ] # * int(( self.graph.num_nodes * .1))
 		while len(self.next_generation) < len(self.current_generation):
-			sample = [random.choice(self.current_generation) for i in range(5)]
-			sample.sort(key = lambda x: x.fitness)
-			self.next_generation.append(sample[0])
+			sample = random.sample(self.current_generation, self.graph.num_nodes / 10)
+			self.next_generation.append(min(sample, key=lambda item: item.fitness))
+		random.shuffle(self.next_generation)
 
 	def determine_winner(self):
-		[solution.compute_fitness() for solution in self.current_generation]
-		self.current_generation.sort(key = lambda x: x.fitness)
-		return self.current_generation[0]
+		for solution in self.current_generation:
+			solution.compute_fitness()
+		return min(self.current_generation, key=lambda item: item.fitness)
 
 
