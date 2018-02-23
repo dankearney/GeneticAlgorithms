@@ -13,8 +13,8 @@ class FullyConnectedGraph:
         self.num_nodes = len(self.nodes)
         self.plotter = GraphPlotter(self)
 
-    def plot(self, solution=None, title = ''):
-        self.plotter.plot(title, solution)
+    def plot(self, solution, title = ''):
+        self.plotter.plot(solution, title)
 
     def get_node_xy(self, i):
         return self.nodes[i]
@@ -24,14 +24,6 @@ class FullyConnectedGraph:
         p2 = self.nodes[index_2]
         dist = math.sqrt( ((p1[0]-p2[0])**2)+((p1[1]-p2[1])**2) )
         return dist
-
-    def measure_solution_fitness(self, solution):
-        total_dist = 0
-        for i in range(len(solution)):
-            start = solution.get(i)
-            end = solution.get((i+1)%self.num_nodes)
-            total_dist += self.dist_between(start, end)
-        return total_dist
 
     def find_brute_force_solution(self):
         best_solution = None

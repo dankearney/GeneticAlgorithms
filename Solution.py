@@ -7,7 +7,12 @@ class Solution:
 		self.fitness = None
 
 	def compute_fitness(self):
-		self.fitness = self.graph.measure_solution_fitness(self)
+		total_dist = 0
+		for i in range(len(self)):
+			start = self.get(i)
+			end = self.get((i+1)%len(self))
+			total_dist += self.graph.dist_between(start, end)
+		self.fitness = total_dist
 		return self.fitness
 
 	# Certain solutions produced at various points of the algorithm are invalid.
@@ -28,6 +33,12 @@ class Solution:
 			if element in seen:
 				self.arr[i] =  difference.pop()
 			seen.add(element)
+
+	def swap(self, index_a, index_b):
+		val_a = self.get(index_a)
+		val_b = self.get(index_b)
+		self.set(index_a, val_b)
+		self.set(index_b, val_a)
 
 	def set(self, i, val):
 		self.arr[i] = val

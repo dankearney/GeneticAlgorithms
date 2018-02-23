@@ -19,18 +19,17 @@ class GraphPlotter:
             end = solution.get((i+1)%self.graph.num_nodes)
             self.G.add_edge(start, end, color=color, distance = self.graph.dist_between(start, end))
 
-    def plot(self, title='', solution=None):
+    def plot(self, solution, title=''):
         try:
             self.G = nx.Graph() # Little hack to clear the old graph
             self.populate_networkx_graph_nodes()
-            if solution != None:
-                self.add_edges(solution)
+            self.add_edges(solution)
             plt.clf()
             pos=nx.get_node_attributes(self.G, 'xy')
-            nx.draw(self.G, pos=pos)
-            plt.title(title)
+            nx.draw(self.G, pos=pos, node_size=200, node_color='black', edge_color='orchid')
             print title
             plt.ion()
+            plt.gca().set_title("Title x")
             plt.show()
             plt.draw()
             plt.pause(0.001)    

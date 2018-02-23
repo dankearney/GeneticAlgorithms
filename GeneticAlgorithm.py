@@ -16,8 +16,6 @@ class GeneticAlgorithm:
 	def run(self):
 		self.generate_random_solutions()
 		for i in range(self.depth):
-			winner = self.determine_winner()
-			self.graph.plot(winner, title=str(winner.fitness))
 			self.step()
 		return self.determine_winner()
 
@@ -71,7 +69,7 @@ class GeneticAlgorithm:
 	def mutate(self):
 		for solution in self.next_generation:
 			for j in range(self.graph.num_nodes):
-				if random.random() < .01: # Each chromosome has a 1
+				if random.random() < .015: # Each chromosome has a 1
 					index_a = random.randrange(0, self.graph.num_nodes)
 					index_b = random.randrange(0, self.graph.num_nodes)
 					val_a = solution.get(index_a)
@@ -117,8 +115,6 @@ class GeneticAlgorithm:
 	def run(self):
 		self.generate_random_solutions()
 		for i in range(self.depth):
-			winner = self.determine_winner()
-			self.graph.plot(winner, title=str(winner.fitness))
 			self.step()
 		return self.determine_winner()
 
@@ -172,13 +168,14 @@ class GeneticAlgorithm:
 	def mutate(self):
 		for solution in self.next_generation:
 			for j in range(self.graph.num_nodes):
-				if random.random() < .015: # Each gene has a chance of mutation
+				if random.random() < .02: # Each gene has a chance of mutation. Value tuned by
 					index_a = random.randrange(0, self.graph.num_nodes)
 					index_b = random.randrange(0, self.graph.num_nodes)
-					val_a = solution.get(index_a)
-					val_b = solution.get(index_b)
-					solution.set(index_a, val_b)
-					solution.set(index_b, val_a)
+					solution.swap(index_a, index_b)
+
+	def compute_all_current_gen_fitnesses(self):
+		for solution in self.current_generation:
+			solution.compute_fitness()
 
 	# Use a "tournament select" to choose winning parents.
 	# For our cases, we want to weight our next gen towards the best performers.
@@ -187,16 +184,20 @@ class GeneticAlgorithm:
 	# computing N fitnesses.
 	def select_parents(self):
 		self.next_generation = [] # self.determine_winner
-		for solution in self.current_generation:
-			solution.compute_fitness()
+		self.compute_all_current_gen_fitnesses()
+		fittest = self.fittest_sol_current_gen()
+		self.graph.plot(fittest, title=fittest.fitness)
 		while len(self.next_generation) < len(self.current_generation):
-			sample = [random.choice(self.current_generation) for i in range(10)] 
-			sample.sort(key = lambda x: x.fitness)
-			self.next_generation.append(sample[0])
+			sample = random.sample(self.current_generation, 10)
+			fittest = min(sample, key=lambda x: x.fitness)
+			self.next_generation.append(fittest)
+
+	def fittest_sol_current_gen(self):
+		return min(self.current_generation, key=lambda x: x.fitness)
+
 
 	def determine_winner(self):
-		[solution.compute_fitness() for solution in self.current_generation]
-		self.current_generation.sort(key = lambda x: x.fitness)
-		return self.current_generation[0]
+		self.compute_all_current_gen_fitnesses()
+		return self.fittest_sol_current_gen()
 
 
