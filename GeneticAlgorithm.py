@@ -69,7 +69,7 @@ class GeneticAlgorithm:
 	def mutate(self):
 		for solution in self.next_generation:
 			for j in range(self.graph.num_nodes):
-				if random.random() < .02: # Each gene has a chance of mutation. Value tuned by
+				if random.random() < .015: # Each gene has a chance of mutation. Value tuned by
 					index_a = random.randrange(0, self.graph.num_nodes)
 					index_b = random.randrange(0, self.graph.num_nodes)
 					solution.swap(index_a, index_b)
@@ -95,7 +95,6 @@ class GeneticAlgorithm:
 
 	def fittest_sol_current_gen(self):
 		return min(self.current_generation, key=lambda x: x.fitness)
-
 
 	def determine_winner(self):
 		self.compute_all_current_gen_fitnesses()
