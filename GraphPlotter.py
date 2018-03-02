@@ -23,9 +23,6 @@ class GraphPlotter:
         try:
 
             print title
-            if random.random() > .99:
-                return
-
             self.G = nx.Graph() # Little hack to clear the old graph
             self.populate_networkx_graph_nodes()
             self.add_edges(solution)

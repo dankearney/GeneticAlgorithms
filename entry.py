@@ -2,7 +2,7 @@ from  FullyConnectedGraph import *
 from GeneticAlgorithm import *
 from Solution import *
 
-N = 75
+N = 50
 
 random_nodes = [(random.random(), random.random()) for i in range(N)]
 
