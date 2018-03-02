@@ -13,21 +13,26 @@ class GraphPlotter:
         for i in range(self.graph.num_nodes):
             self.G.add_node(i, xy=self.graph.get_node_xy(i))
 
-    def add_edges(self, solution, color='black'):
+    def add_edges(self, solution):
         for i in range(self.graph.num_nodes):
             start = solution.get(i)
             end = solution.get((i+1)%self.graph.num_nodes)
-            self.G.add_edge(start, end, color=color, distance = self.graph.dist_between(start, end))
+            self.G.add_edge(start, end)
 
     def plot(self, solution, title=''):
         try:
+
+            print title
+            if random.random() > .99:
+                return
+
             self.G = nx.Graph() # Little hack to clear the old graph
             self.populate_networkx_graph_nodes()
             self.add_edges(solution)
             plt.clf()
             pos=nx.get_node_attributes(self.G, 'xy')
             nx.draw(self.G, pos=pos, node_size=200, node_color='black', edge_color='orchid')
-            print title
+
             plt.ion()
             plt.gca().set_title("Title x")
             plt.show()
