@@ -3,7 +3,7 @@ from GeneticAlgorithm import *
 from Solution import *
 
 from random import shuffle
-N = 150
+N = 500
 
 random_nodes = [(random.random(), random.random()) for i in range(N)]
 

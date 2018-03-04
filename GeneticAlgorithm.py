@@ -74,7 +74,7 @@ class GeneticAlgorithm:
 	# Swapping maintains the solution integrity.
 	def mutate(self):
 		for solution in self.next_generation:
-			if random.random() < .3: 
+			if random.random() < 1: 
 				index_a = random.randrange(0, self.graph.num_nodes)
 				index_b = random.randrange(0, self.graph.num_nodes)
 				val_a = solution.get(index_a)
