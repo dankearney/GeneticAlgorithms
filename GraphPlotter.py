@@ -2,7 +2,7 @@ import networkx as nx
 import random
 import matplotlib.pyplot as plt
 import time
-
+i = 0
 class GraphPlotter:
 
     def __init__(self, graph):
@@ -28,12 +28,15 @@ class GraphPlotter:
 
             print title
             self.fitnesses.append(float(title))
+            global i
+            i += 1
+            if i%10: 
+                return
 
             line1, = self.ax.plot(range(len(self.fitnesses)), self.fitnesses, 'r-') # Returns a tuple of line objects, thus the comma
             # line1.set_ydata(self.fitnesses)
             self.ax.set_title('Max fitness: ' + str(int(title)))
 
-            self.fig.canvas.draw()
 
             self.G = nx.Graph() # Little hack to clear the old graph
             self.populate_networkx_graph_nodes()
@@ -43,7 +46,7 @@ class GraphPlotter:
             nx.draw(self.G, pos=pos, ax=self.ax2, node_size=100, node_color='black', edge_color='orchid')
 
             plt.ion()
-            plt.show()
+            # plt.show()
             plt.draw()
             plt.pause(0.001)    
             plt.show(block=False)

@@ -88,7 +88,7 @@ class GeneticAlgorithm:
 		fittest = self.fittest_sol_current_gen()
 		self.graph.plot(fittest, title=fittest.fitness)
 		while len(self.next_generation) < len(self.current_generation):
-			sample = random.sample(self.current_generation, 10)
+			sample = random.sample(self.current_generation, 5)
 			fittest = min(sample, key=lambda x: x.fitness)
 			self.next_generation.append(fittest)
 
