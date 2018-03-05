@@ -34,7 +34,7 @@ class GeneticAlgorithm:
 	# User ordered crossover to mix parent pairs.
 	def cross_over(self):
 		for i in range(0, len(self.next_generation), 2):
-			if random.random() < .99:
+			if random.random() < .75:
 				mom, dad = self.next_generation[i].arr[:], self.next_generation[i+1].arr[:]
 				self.next_generation[i]   = Solution(self.cross_merge_arr(mom, dad), self.graph)
 				self.next_generation[i+1] = Solution(self.cross_merge_arr(dad, mom), self.graph)
@@ -68,7 +68,7 @@ class GeneticAlgorithm:
 	# Swapping maintains the solution integrity.
 	def mutate(self):
 		for solution in self.next_generation:
-			if random.random() < .3: # Each chromosome has a chance of mutation. Value tuned manually
+			if random.random() < .5: # Each chromosome has a chance of mutation. Value tuned manually
 				index_a = random.randrange(0, self.graph.num_nodes)
 				index_b = random.randrange(0, self.graph.num_nodes)
 				solution.swap(index_a, index_b)
