@@ -30,7 +30,7 @@ class GraphPlotter:
             self.fitnesses.append(float(title))
             global i
             i += 1
-            if i%10: 
+            if i%1: 
                 return
 
             line1, = self.ax.plot(range(len(self.fitnesses)), self.fitnesses, 'r-') # Returns a tuple of line objects, thus the comma
