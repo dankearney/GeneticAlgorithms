@@ -8,6 +8,10 @@ class GraphPlotter:
     def __init__(self, graph):
         self.graph = graph
         self.G = nx.Graph()
+        self.fitnesses = []
+        self.fig = plt.figure()
+        self.ax = self.fig.add_subplot(122)
+        self.ax2 = self.fig.add_subplot(121)
 
     def populate_networkx_graph_nodes(self):
         for i in range(self.graph.num_nodes):
@@ -23,15 +27,22 @@ class GraphPlotter:
         try:
 
             print title
+            self.fitnesses.append(float(title))
+
+            line1, = self.ax.plot(range(len(self.fitnesses)), self.fitnesses, 'r-') # Returns a tuple of line objects, thus the comma
+            # line1.set_ydata(self.fitnesses)
+            self.ax.set_title('Max fitness: ' + str(int(title)))
+
+            self.fig.canvas.draw()
+
             self.G = nx.Graph() # Little hack to clear the old graph
             self.populate_networkx_graph_nodes()
             self.add_edges(solution)
-            plt.clf()
+            self.ax2.clear()
             pos=nx.get_node_attributes(self.G, 'xy')
-            nx.draw(self.G, pos=pos, node_size=200, node_color='black', edge_color='orchid')
+            nx.draw(self.G, pos=pos, ax=self.ax2, node_size=100, node_color='black', edge_color='orchid')
 
             plt.ion()
-            plt.gca().set_title("Title x")
             plt.show()
             plt.draw()
             plt.pause(0.001)    
