@@ -13,8 +13,8 @@ class FullyConnectedGraph:
         self.num_nodes = len(self.nodes)
         self.plotter = GraphPlotter(self)
 
-    def plot(self, solution, title = ''):
-        self.plotter.plot(solution, title)
+    def plot(self, solution, mutation_rate, crossover_rate, generation, chromosomes):
+        self.plotter.plot(solution, mutation_rate, crossover_rate, generation, self.num_nodes, chromosomes)
 
     def get_node_xy(self, i):
         return self.nodes[i]

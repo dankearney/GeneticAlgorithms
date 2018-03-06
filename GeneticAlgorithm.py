@@ -6,16 +6,19 @@ class GeneticAlgorithm:
 	# Runs a genetic algorithm on the given graph.
 	# Uses num_chromosomes solutions.
 	# Stops when depth iterations have happened.
-	def __init__(self, graph, depth=100, num_chromosomes=100):
+	def __init__(self, graph, depth=100, num_chromosomes=100, mutation_rate = 0, crossover_rate = 0):
 		self.graph = graph
+		self.mutation_rate = mutation_rate
+		self.crossover_rate = crossover_rate
 		self.num_chromosomes = num_chromosomes	
 		self.depth = depth
+		self.generation = 0
 		self.current_generation = []
 		self.next_generation = []
 
 	def run(self):
 		self.generate_random_solutions()
-		for i in range(self.depth):
+		for self.generation in range(self.depth):
 			self.step()
 		return self.determine_winner()
 
@@ -33,8 +36,8 @@ class GeneticAlgorithm:
 	
 	# User ordered crossover to mix parent pairs.
 	def cross_over(self):
-		for i in range(0, len(self.next_generation), 2):
-			if random.random() < .75:
+		for i in range(0, self.num_chromosomes, 2):
+			if random.random() < self.crossover_rate:
 				mom, dad = self.next_generation[i].arr[:], self.next_generation[i+1].arr[:]
 				self.next_generation[i]   = Solution(self.cross_merge_arr(mom, dad), self.graph)
 				self.next_generation[i+1] = Solution(self.cross_merge_arr(dad, mom), self.graph)
@@ -68,7 +71,7 @@ class GeneticAlgorithm:
 	# Swapping maintains the solution integrity.
 	def mutate(self):
 		for solution in self.next_generation:
-			if random.random() < .5: # Each chromosome has a chance of mutation. Value tuned manually
+			if random.random() < self.mutation_rate: # Each chromosome has a chance of mutation. Value tuned manually
 				index_a = random.randrange(0, self.graph.num_nodes)
 				index_b = random.randrange(0, self.graph.num_nodes)
 				solution.swap(index_a, index_b)
@@ -83,12 +86,12 @@ class GeneticAlgorithm:
 	# More efficient to pre-compute the fitnesses since we can't really get much around
 	# computing N fitnesses.
 	def select_parents(self):
-		self.next_generation = [] # self.determine_winner
+		self.next_generation = []
 		self.compute_all_current_gen_fitnesses()
 		fittest = self.fittest_sol_current_gen()
-		self.graph.plot(fittest, title=fittest.fitness)
+		self.graph.plot(fittest, self.mutation_rate, self.crossover_rate, self.generation, self.num_chromosomes)
 		while len(self.next_generation) < len(self.current_generation):
-			sample = random.sample(self.current_generation, 5)
+			sample = random.sample(self.current_generation, 4)
 			fittest = min(sample, key=lambda x: x.fitness)
 			self.next_generation.append(fittest)
 

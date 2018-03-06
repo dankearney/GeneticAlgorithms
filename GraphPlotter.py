@@ -2,7 +2,7 @@ import networkx as nx
 import random
 import matplotlib.pyplot as plt
 import time
-i = 0
+
 class GraphPlotter:
 
     def __init__(self, graph):
@@ -23,29 +23,20 @@ class GraphPlotter:
             end = solution.get((i+1)%self.graph.num_nodes)
             self.G.add_edge(start, end)
 
-    def plot(self, solution, title=''):
+    def plot(self, solution, mutation_rate, crossover_rate, generation, num_nodes, chromosomes):
         try:
 
-            print title
-            self.fitnesses.append(float(title))
-            global i
-            i += 1
-            if i%1: 
-                return
-
+            self.fitnesses.append(solution.fitness)
             line1, = self.ax.plot(range(len(self.fitnesses)), self.fitnesses, 'r-') # Returns a tuple of line objects, thus the comma
-            # line1.set_ydata(self.fitnesses)
-            self.ax.set_title('Max fitness: ' + str(int(title)))
-
-
+            self.ax.set_title('Fitness: %.2f \n Generation: %d\n Nodes: %d  Mutation rate: %.3f\n  Crossover rate: %.3f  Chromosomes: %d'
+                %(solution.fitness, generation, num_nodes, mutation_rate, crossover_rate, chromosomes))
             self.G = nx.Graph() # Little hack to clear the old graph
             self.populate_networkx_graph_nodes()
             self.add_edges(solution)
             self.ax2.clear()
             pos=nx.get_node_attributes(self.G, 'xy')
             nx.draw(self.G, pos=pos, ax=self.ax2, node_size=100, node_color='black', edge_color='orchid')
-
-            plt.ion()
+            # plt.ion()
             # plt.show()
             plt.draw()
             plt.pause(0.001)    
