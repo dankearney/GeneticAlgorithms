@@ -28,7 +28,7 @@ class GraphPlotter:
 
             self.fitnesses.append(solution.fitness)
             line1, = self.ax.plot(range(len(self.fitnesses)), self.fitnesses, 'r-') # Returns a tuple of line objects, thus the comma
-            self.ax.set_title('Fitness: %.2f \n Generation: %d\n Nodes: %d  Mutation rate: %.3f\n  Crossover rate: %.3f  Chromosomes: %d'
+            self.ax.set_title('Fitness: %.2f Generation: %d\n Nodes: %d  Mutation rate: %.3f\n  Crossover rate: %.3f  Chromosomes: %d'
                 %(solution.fitness, generation, num_nodes, mutation_rate, crossover_rate, chromosomes))
             self.G = nx.Graph() # Little hack to clear the old graph
             self.populate_networkx_graph_nodes()
