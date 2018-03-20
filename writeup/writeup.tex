@@ -1,4 +1,4 @@
-\documentclass[UTF8]{report}
+\documentclass[UTF8]{report}   
 \begin{document}
 
 \title{%
@@ -20,9 +20,9 @@
 
 \section{Genetic Algorithm Function}
 
-The genetic algorithm works by mimicking the mechanism of chromosomes and genes in evolutionary biology.
+The genetic algorithm works by mimicking the mechanism of chromosomes and genes in evolutionary biology. The algorithm works by creating a random `generation' of solutions to seed the iterative process. Each individual solution -- called a `chromosome' -- has a random solution to the problem at hand, at first. 
 
-A series of 
+The iterative step of the process works by using a method to pick the fittest members of each generation and selecting them as parents for the next generation. Pairs of parents are `crossed over', where the parent solutions are co-mingled, and finally, a bit of randomness is added by `mutating' some of the solutions with random adjustments. The process then repeats, for a certain number of generations or until some fitness level is reached. 
 
 \section{Genetic Algorithm Implementation in Python}
 
