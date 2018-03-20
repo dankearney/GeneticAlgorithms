@@ -2,6 +2,7 @@ import networkx as nx
 import random
 import matplotlib.pyplot as plt
 import time
+import string
 
 class GraphPlotter:
 
@@ -12,6 +13,7 @@ class GraphPlotter:
         self.fig = plt.figure()
         self.ax = self.fig.add_subplot(122)
         self.ax2 = self.fig.add_subplot(121)
+        self.filename = ''.join(random.choice(string.ascii_uppercase + string.digits) for _ in range(5)) + '.pdf'
 
     def populate_networkx_graph_nodes(self):
         for i in range(self.graph.num_nodes):
@@ -36,11 +38,11 @@ class GraphPlotter:
             self.ax2.clear()
             pos=nx.get_node_attributes(self.G, 'xy')
             nx.draw(self.G, pos=pos, ax=self.ax2, node_size=100, node_color='black', edge_color='orchid')
-            # plt.ion()
-            # plt.show()
             plt.draw()
             plt.pause(0.001)    
             plt.show(block=False)
+            self.fig.savefig(self.filename, bbox_inches='tight')
+
 
         except:
             print "Warning! Plotting failed. You will need a window manager like Ximg if running on Windows Ubuntu."
