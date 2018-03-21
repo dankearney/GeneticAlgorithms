@@ -1,0 +1,22 @@
+\section{Genetic Algorithm Function}
+
+The genetic algorithm works by mimicking the mechanism of chromosomes and genes in evolutionary biology. Individuals with various sets of genes compete with one another, reproducing into the next generation, with the whole population becoming fitter and fitter as the fittest solutions survive, and the less fit ones don't.
+
+The genetic algorithm works by initially creating a random `generation' of solutions to seed the iterative process. Each individual solution -- called a `chromosome' -- has a random solution to the problem at hand.  
+
+Once the seed generation is created, the loop begins. The invariant is as follows. First, certain individuals are selected into the next generation, with the fittest solutions being favored. Pairs of these parents are `crossed over', a process where parts of each solution are absorbed into each other. Finally, a bit of randomness is added by `mutating' some of the solutions with random adjustments. 
+
+The loop has no natural termination point. The loop can terminate after a certain number of generations, or when a desired fitness is reached. 
+
+The following pseudocode summarizes how the genetic algorithm works. In the following section, the paper describes an implementation in Python.
+
+\begin{python}
+
+current_generation = generate_random_solutions     
+for G generations:                                 
+    next_generation = current_generation.select    
+    next_generation.cross_over	                   
+    next_generation.mutate	                       
+    current_generation = next_generation           
+
+\end{python}
