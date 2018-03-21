@@ -137,5 +137,5 @@ nodes = [ 	# https://people.sc.fsu.edu/~jburkardt/datasets/cities/sgb128_xy.txt
 (  -5613.31, 2843.96    )]
 
 G = FullyConnectedGraph(random_nodes)
-ga = GeneticAlgorithm(G, num_chromosomes = 1000, depth=10000000, mutation_rate = .05, crossover_rate=.99)
+ga = GeneticAlgorithm(G, num_chromosomes = 100, depth=10000000, mutation_rate = .25, crossover_rate=.99)
 winner = ga.run()
