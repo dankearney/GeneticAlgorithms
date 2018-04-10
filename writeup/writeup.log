@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.1.29)  9 APR 2018 23:25
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.1.29)  10 APR 2018 00:42
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -411,128 +411,135 @@ tion-eps-converted-to.pdf>]
 File: images/50/vis_2.pdf Graphic file (type pdf)
 
 <use images/50/vis_2.pdf>
-Package pdftex.def Info: images/50/vis_2.pdf used on input line 6.
+Package pdftex.def Info: images/50/vis_2.pdf used on input line 10.
 (pdftex.def)             Requested size: 54.2025pt x 62.20905pt.
 
 <images/50/vis_8.pdf, id=54, 392.2865pt x 450.2421pt>
 File: images/50/vis_8.pdf Graphic file (type pdf)
 
 <use images/50/vis_8.pdf>
-Package pdftex.def Info: images/50/vis_8.pdf used on input line 7.
+Package pdftex.def Info: images/50/vis_8.pdf used on input line 11.
 (pdftex.def)             Requested size: 54.2025pt x 62.20905pt.
 
 <images/50/vis_14.pdf, id=55, 392.2865pt x 450.2421pt>
 File: images/50/vis_14.pdf Graphic file (type pdf)
 
 <use images/50/vis_14.pdf>
-Package pdftex.def Info: images/50/vis_14.pdf used on input line 8.
+Package pdftex.def Info: images/50/vis_14.pdf used on input line 12.
 (pdftex.def)             Requested size: 54.2025pt x 62.20905pt.
 
 <images/50/vis_20.pdf, id=56, 392.2865pt x 450.2421pt>
 File: images/50/vis_20.pdf Graphic file (type pdf)
 
 <use images/50/vis_20.pdf>
-Package pdftex.def Info: images/50/vis_20.pdf used on input line 9.
+Package pdftex.def Info: images/50/vis_20.pdf used on input line 13.
 (pdftex.def)             Requested size: 54.2025pt x 62.20905pt.
 
 <images/50/vis_26.pdf, id=57, 392.2865pt x 450.2421pt>
 File: images/50/vis_26.pdf Graphic file (type pdf)
 
 <use images/50/vis_26.pdf>
-Package pdftex.def Info: images/50/vis_26.pdf used on input line 10.
+Package pdftex.def Info: images/50/vis_26.pdf used on input line 14.
 (pdftex.def)             Requested size: 54.2025pt x 62.20905pt.
 
 <images/50/vis_32.pdf, id=58, 392.2865pt x 450.2421pt>
 File: images/50/vis_32.pdf Graphic file (type pdf)
 
 <use images/50/vis_32.pdf>
-Package pdftex.def Info: images/50/vis_32.pdf used on input line 11.
+Package pdftex.def Info: images/50/vis_32.pdf used on input line 15.
 (pdftex.def)             Requested size: 54.2025pt x 62.20905pt.
 
 <images/50/vis_38.pdf, id=59, 392.2865pt x 450.2421pt>
 File: images/50/vis_38.pdf Graphic file (type pdf)
 
 <use images/50/vis_38.pdf>
-Package pdftex.def Info: images/50/vis_38.pdf used on input line 12.
+Package pdftex.def Info: images/50/vis_38.pdf used on input line 16.
 (pdftex.def)             Requested size: 54.2025pt x 62.20905pt.
 
 <images/50/vis_46.pdf, id=60, 392.2865pt x 450.2421pt>
 File: images/50/vis_46.pdf Graphic file (type pdf)
 
 <use images/50/vis_46.pdf>
-Package pdftex.def Info: images/50/vis_46.pdf used on input line 13.
+Package pdftex.def Info: images/50/vis_46.pdf used on input line 17.
 (pdftex.def)             Requested size: 54.2025pt x 62.20905pt.
 
 <images/50/vis_54.pdf, id=61, 392.2865pt x 450.2421pt>
 File: images/50/vis_54.pdf Graphic file (type pdf)
 
 <use images/50/vis_54.pdf>
-Package pdftex.def Info: images/50/vis_54.pdf used on input line 14.
+Package pdftex.def Info: images/50/vis_54.pdf used on input line 18.
 (pdftex.def)             Requested size: 54.2025pt x 62.20905pt.
 
 <images/50/vis_62.pdf, id=62, 392.2865pt x 450.2421pt>
 File: images/50/vis_62.pdf Graphic file (type pdf)
 
 <use images/50/vis_62.pdf>
-Package pdftex.def Info: images/50/vis_62.pdf used on input line 15.
+Package pdftex.def Info: images/50/vis_62.pdf used on input line 19.
 (pdftex.def)             Requested size: 54.2025pt x 62.20905pt.
 
 <images/50/vis_70.pdf, id=63, 392.2865pt x 450.2421pt>
 File: images/50/vis_70.pdf Graphic file (type pdf)
 
 <use images/50/vis_70.pdf>
-Package pdftex.def Info: images/50/vis_70.pdf used on input line 16.
+Package pdftex.def Info: images/50/vis_70.pdf used on input line 20.
 (pdftex.def)             Requested size: 54.2025pt x 62.20905pt.
 
 <images/50/vis_78.pdf, id=64, 392.2865pt x 450.2421pt>
 File: images/50/vis_78.pdf Graphic file (type pdf)
 
 <use images/50/vis_78.pdf>
-Package pdftex.def Info: images/50/vis_78.pdf used on input line 17.
+Package pdftex.def Info: images/50/vis_78.pdf used on input line 21.
 (pdftex.def)             Requested size: 54.2025pt x 62.20905pt.
 
 <images/50/vis_86.pdf, id=65, 392.2865pt x 450.2421pt>
 File: images/50/vis_86.pdf Graphic file (type pdf)
 
 <use images/50/vis_86.pdf>
-Package pdftex.def Info: images/50/vis_86.pdf used on input line 18.
+Package pdftex.def Info: images/50/vis_86.pdf used on input line 22.
 (pdftex.def)             Requested size: 54.2025pt x 62.20905pt.
 
 <images/50/vis_94.pdf, id=66, 392.2865pt x 450.2421pt>
 File: images/50/vis_94.pdf Graphic file (type pdf)
 
 <use images/50/vis_94.pdf>
-Package pdftex.def Info: images/50/vis_94.pdf used on input line 19.
+Package pdftex.def Info: images/50/vis_94.pdf used on input line 23.
 (pdftex.def)             Requested size: 54.2025pt x 62.20905pt.
 
 <images/50/vis_108.pdf, id=67, 392.2865pt x 450.2421pt>
 File: images/50/vis_108.pdf Graphic file (type pdf)
 
 <use images/50/vis_108.pdf>
-Package pdftex.def Info: images/50/vis_108.pdf used on input line 20.
+Package pdftex.def Info: images/50/vis_108.pdf used on input line 24.
 (pdftex.def)             Requested size: 54.2025pt x 62.20905pt.
 
 <images/50/vis_116.pdf, id=68, 392.2865pt x 450.2421pt>
 File: images/50/vis_116.pdf Graphic file (type pdf)
 
 <use images/50/vis_116.pdf>
-Package pdftex.def Info: images/50/vis_116.pdf used on input line 21.
+Package pdftex.def Info: images/50/vis_116.pdf used on input line 25.
 (pdftex.def)             Requested size: 54.2025pt x 62.20905pt.
 
 <images/50/vis_124.pdf, id=69, 392.2865pt x 450.2421pt>
 File: images/50/vis_124.pdf Graphic file (type pdf)
 
 <use images/50/vis_124.pdf>
-Package pdftex.def Info: images/50/vis_124.pdf used on input line 22.
+Package pdftex.def Info: images/50/vis_124.pdf used on input line 26.
 (pdftex.def)             Requested size: 54.2025pt x 62.20905pt.
-
-<images/50/graph_139.pdf, id=70, 892.85994pt x 532.27734pt>
+ [7]
+<images/50/graph_139.pdf, id=73, 892.85994pt x 532.27734pt>
 File: images/50/graph_139.pdf Graphic file (type pdf)
 
 <use images/50/graph_139.pdf>
-Package pdftex.def Info: images/50/graph_139.pdf used on input line 29.
+Package pdftex.def Info: images/50/graph_139.pdf used on input line 33.
 (pdftex.def)             Requested size: 433.62pt x 258.50345pt.
- [7 <./images/50/vis_2.pdf> <./images/50/vis_8.pdf
+
+<images/100.pdf, id=74, 901.26132pt x 513.91354pt>
+File: images/100.pdf Graphic file (type pdf)
+ <use images/100.pdf>
+Package pdftex.def Info: images/100.pdf used on input line 46.
+(pdftex.def)             Requested size: 433.62pt x 247.25598pt.
+
+[8 <./images/50/vis_2.pdf> <./images/50/vis_8.pdf
 
 pdfTeX warning: pdflatex (file ./images/50/vis_8.pdf): PDF inclusion: multiple 
 pdfs with page group included in a single page
@@ -596,30 +603,44 @@ e pdfs with page group included in a single page
 
 pdfTeX warning: pdflatex (file ./images/50/vis_124.pdf): PDF inclusion: multipl
 e pdfs with page group included in a single page
->]) [8 <./images/50/graph_139.pdf>] (./writeup.aux) ) 
+> <./images/50/graph_139.pdf
+
+pdfTeX warning: pdflatex (file ./images/50/graph_139.pdf): PDF inclusion: multi
+ple pdfs with page group included in a single page
+>] <images/north_america.pdf, id=776, 910.82832pt x 513.91354pt>
+File: images/north_america.pdf Graphic file (type pdf)
+
+<use images/north_america.pdf>
+Package pdftex.def Info: images/north_america.pdf used on input line 57.
+(pdftex.def)             Requested size: 433.62pt x 244.66039pt.
+) [9 <./images/100.pdf>] [10 <./images/north_america.pdf>] (./writeup.aux)
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
 Here is how much of TeX's memory you used:
- 6208 strings out of 493029
- 90514 string characters out of 6136234
+ 6218 strings out of 493029
+ 90728 string characters out of 6136234
  363801 words of memory out of 5000000
- 9645 multiletter control sequences out of 15000+600000
+ 9653 multiletter control sequences out of 15000+600000
  10172 words of font info for 38 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  44i,17n,49p,725b,1452s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-
-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/f
-onts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/t
-ype1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
-blic/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
-cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8
-.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsltt10.pfb
-></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr
-/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share
-/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb>
-Output written on writeup.pdf (9 pages, 396810 bytes).
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texli
+ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmsltt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmtt8.pfb>
+Output written on writeup.pdf (11 pages, 437701 bytes).
 PDF statistics:
- 812 PDF objects out of 1000 (max. 8388607)
- 153 compressed objects within 2 object streams
+ 896 PDF objects out of 1000 (max. 8388607)
+ 168 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 101 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 111 words of extra memory for PDF output out of 10000 (max. 10000000)
 
