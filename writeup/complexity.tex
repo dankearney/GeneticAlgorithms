@@ -1,0 +1,61 @@
+\section{Complexity Analysis}
+
+\subsection{Time Complexity}
+
+The genetic algorithm is interesting because it is a heuristics-based algorithm, that makes no promises to perfectly solve the problem at hand. Largely speaking, the genetic algorithm first requires a setup (creating the first generation), an invariant (selection, crossing over, mutation), and a final step in determining the best chromosome in the final step.
+
+\begin{equation}
+T(n) = T(setup) + iterations * T(invariant) + T(final step)
+\end{equation}
+
+First, some definitions. These are:
+
+\begin{center}
+$d$ iterations of the algorithm
+
+$N$ vertices in the graph
+
+$c$ chromosomes  
+\end{center} 
+
+\subsection{Setup}
+
+The setup process requires setting up the first generation of chromosomes. There are $c$ chromosomes, each of which has $N$ elements. 
+
+$T(setup) = T(N * c)$
+
+\subsection{Invariant}
+
+The invariant is a bit more complex. The invariant consists of selection, crossing-over, and mutation.
+
+Selection utilizes a tournament select. In my implementation, all of the chromosomes' fiT(N)esses are first computed. Each fiT(N)ess computation requires walking through the entire graph, which is of size $N$. Then, four chromosomes are selected at random (which takes constant time), and the winner is selected, which also takes constant time since the fiT(N)esses were pre-computed. Therefore:
+
+$T(selection) =  T(N * c)$
+
+Crossing over iterates over each chromosome, merging it into its other half. Each merge process takes $N$ iterations, and it is done once per chromosome.
+
+$T(crossing_over) = T(N * c)$
+
+Mutation swaps two elements of each chromosome. Assuming a 100\% mutation rate, the swapping process happens $c$ times.
+
+$T(mutation) = T(N)$
+
+\subsection{Final Step}
+
+The final step in the process is to determine the fittest solution. To do so, each solution's fiT(N)ess must be computed, which requires $T(N)$ iterations per chromosomes; then the winner is chosen as the one with the minimum fiT(N)ess value (shortest path) which takes $c$ iterations. Therefore:
+
+$T(final_step) = T(N*c + c) $ 
+
+\subsection{Synthesis}
+
+Putting all of this together:
+
+\begin{equation}
+\begin{split}
+T(n) &= T(\textrm{setup}) + \textrm{iterations} * T(\textrm{invariant}) + T(\textrm{final step}) \\
+T(n) &= T(N * c) + d * [T(N * c) + T(N * c + c) + T(N) ] + T(N*c) \\
+T(n) &= \Theta(N * d * c)
+\end{split}
+\end{equation}
+
+Intuitively, this is simple to explain. Fundamentally, the number of chromosomes, the size of the input graph, and the number of iterations all factor into the number of iterations that the algorithm takes.

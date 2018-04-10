@@ -9,7 +9,12 @@
 \contentsline {subsection}{\numberline {0.5.4}Crossing Over}{5}
 \contentsline {subsection}{\numberline {0.5.5}Mutation}{5}
 \contentsline {section}{\numberline {0.6}Complexity Analysis}{6}
-\contentsline {section}{\numberline {0.7}Results}{6}
-\contentsline {subsection}{\numberline {0.7.1}Small Dataset}{6}
-\contentsline {subsection}{\numberline {0.7.2}Large Dataset}{6}
-\contentsline {subsection}{\numberline {0.7.3}Large Real-world Dataset}{6}
+\contentsline {subsection}{\numberline {0.6.1}Time Complexity}{6}
+\contentsline {subsection}{\numberline {0.6.2}Setup}{6}
+\contentsline {subsection}{\numberline {0.6.3}Invariant}{6}
+\contentsline {subsection}{\numberline {0.6.4}Final Step}{7}
+\contentsline {subsection}{\numberline {0.6.5}Synthesis}{7}
+\contentsline {section}{\numberline {0.7}Results}{7}
+\contentsline {subsection}{\numberline {0.7.1}Small Dataset}{7}
+\contentsline {subsection}{\numberline {0.7.2}Large Dataset}{7}
+\contentsline {subsection}{\numberline {0.7.3}Large Real-world Dataset}{7}

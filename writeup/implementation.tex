@@ -6,8 +6,8 @@ This section describes the implementation of a genetic algorithm in Python.
 
 The traveling salesman problem assumes that each city can be reached from any other city; that is, the graph is fully connected. This graph can be very simply represented as a Python list of vertices where the value is each vertex's XY coordinate. Because every vertex connects to every other, we can implicitly assume that each edge (u, v) exists, and that it's value is the simple Euclidean distance between the vertices. As such, the fully connected graph can be represented as a simple list of XY tuples.
 
-\begin{figure}
-\begin{verbatim}
+\begin{figure}[H]
+\begin{python}
 FullyConnectedGraph = [(0.1313626194361659, 0.9537494015311131
  (0.6931250094496763, 0.042877414320216856
  (0.17355376046059656, 0.41488071009395744
@@ -18,33 +18,32 @@ FullyConnectedGraph = [(0.1313626194361659, 0.9537494015311131
  (0.8957003084360835, 0.656752235127581
  (0.7658498920971735, 0.6465721898932276
  (0.8026020533786447, 0.06444102480533265)]
-\end{verbatim}
+\end{python}
 \caption{A simplified representation of a random fully connected graph with N=10. }
 \end{figure}
 
-
 We can visualize this fully connected graph in 2D space, and plot each edge. 
 
-\begin{figure}[h!]
+\begin{figure}[H]
 \centering
-\includegraphics[width=4in]{images/fully_connected_graph.eps}
+\includegraphics[width=2in]{images/fully_connected_graph.eps}
 \caption{A fully-connected graph with 10 vertices, each placed at random XY coordinates. Each vertex represents a city, and the edge weights are the Euclidean distance between the cities.}
 \end{figure}
 
 Any valid solution to the problem is simply a permutation of the list of vertices. For simplicity, we will number the vertices from 0 to N. For example, for a graph with 10 vertices, any of the following are valid solutions:
 
-\begin{figure}[h!]
-\begin{verbatim}
+\begin{figure}[H]
+\begin{python}
 [2, 3, 4, 8, 9, 6, 1, 5, 7, 0]
 [8, 0, 6, 2, 4, 3, 1, 9, 5, 7]
 [9, 0, 5, 3, 7, 4, 8, 6, 1, 2]
-\end{verbatim}
+\end{python}
 \caption{Three valid solutions to the traveling salesman problem with cities numbered 0 to N-1. Each is a permutation of the array 0..10.}
 \end{figure}
 
 This is a visualization of a single solution.
 
-\begin{figure}[h!]
+\begin{figure}[H]
 \centering
 \includegraphics[width=2in]{images/single_solution.eps}
 \caption{An instance of a possible solution to the traveling salesman problem with N=10.}
@@ -52,6 +51,7 @@ This is a visualization of a single solution.
 
 To compute the fitness of a solution, the total distance of the journey is measured, by walking through the path one edge at a time, eventually looping back to the starting point.
 
+\begin{figure}[H]
 \begin{python}
 def compute_fitness(self):
   total_dist = 0
@@ -63,10 +63,13 @@ def compute_fitness(self):
   self.fitness = total_dist
   return self.fitness
 \end{python}
+\end{figure}
 
 \subsection{Creating the First Generation}
 
 The first step in a genetic algorithm is to create a first chromosome, using random solutions. This is straightforward, because a random solution is simply a permutation of the list 0..N. Here, we create a range of numbers sorted from 0 to N, and use the random module to randomly shuffle it. This process is repeated for as many solutions are desired in each chromosome.
+
+\begin{figure}[H]
 \begin{python}
 # Create random solutions to seed the algorithm.
 def generate_random_chromosomes(self):
@@ -75,11 +78,13 @@ def generate_random_chromosomes(self):
     random.shuffle(arr)         # Shake it up to make a random solution
     self.current_generation.append(Solution(arr, self.graph))
 \end{python}
+\end{figure}
  	
 \subsection{Selection}
 
 The goal of selection is to select a group of individuals from the current generation to begin the process of creating the next generation. The process aims to predominantly select the fittest individuals, but allow for less fit individuals to also survive on occasion, to preserve diversity. A good approach for this is a `tournament' selection. In tournament selection, a random batch of four individuals are chosen from the current generation. The fittest is then placed into the next generation. This is repeated until the next generation is full. Using a small selection group -- in this case, only four -- ensures diversity while favoring the top quartile of fittest solutions. 
 
+\begin{figure}[H]
 \begin{python}
   # Use a "tournament select" to choose winning parents.
   # Repeatedly pick 4 random elements and put the 
@@ -98,6 +103,7 @@ The goal of selection is to select a group of individuals from the current gener
       fittest = min(sample, key=lambda x: x.fitness)
       self.next_generation.append(fittest)	
 \end{python}
+\end{figure}
 
 \subsection{Crossing Over}
 
@@ -105,6 +111,7 @@ Crossing first groups each of the newly selected next generation into pairs, whi
 
 We do this by first starting with mom. We take a random chunk of mom's solution and insert it into a new array at the same location. We then insert dad's solution into the new array. This is complex because we aim to retain dad's solution order as much as possible, without duplicating any of the vertices (which is invalid). The procedure cross\_merge\_array below does this by inserting dad's solution into the new array, element by element, unless that element was already inserted as part of crossing-over. This procedure is repeated for both parents, and then repeated for every pair of parents. 
 
+\begin{figure}[H]
 \begin{python}
 # Uses ordered crossover to cross two arrays.
 def cross_merge_arr(self, parent1, parent2):
@@ -134,11 +141,13 @@ def cross_merge_arr(self, parent1, parent2):
       placement_index += 1
   return out_arr
 \end{python} 
+\end{figure}
 
 \subsection{Mutation}
 
 The final step of the genetic algorithm is mutation. Mutation is intended to create a bit of randomness to help the solutions occasionally find brand new paths. The key constraint on mutation is that it must still yield an acceptable solution, that is, a solution where each vertex is visited exactly once. A good way to ensure that is to simply swap two vertices in the solution.
 
+\begin{figure}[H]
 \begin{python}
 # Mutate chromosomes by two swapping random elements at the mutation rate.
 # Swapping maintains the solution integrity 
@@ -151,3 +160,4 @@ def mutate(self):
       index_b = random.randrange(0, self.graph.num_nodes)
       solution.swap(index_a, index_b)
 \end{python}
+\end{figure}
