@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.1.29)  9 APR 2018 22:07
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.1.29)  9 APR 2018 23:25
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -242,6 +242,9 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 631.
 LaTeX Info: Redefining \[ on input line 2735.
 LaTeX Info: Redefining \] on input line 2736.
 )
+(/usr/share/texlive/texmf-dist/tex/latex/subfig/subfig.sty
+Package: subfig 2005/06/28 ver: 1.3 subfig package
+
 (/usr/share/texlive/texmf-dist/tex/latex/caption/caption.sty
 Package: caption 2016/02/21 v3.3-144 Customizing captions (AR)
 
@@ -260,6 +263,20 @@ Package caption3 Info: TeX engine: e-TeX on input line 67.
 Package caption Info: float package is loaded.
 Package caption Info: listings package is loaded.
 )
+\c@KVtest=\count114
+\sf@farskip=\skip46
+\sf@captopadj=\dimen133
+\sf@capskip=\skip47
+\sf@nearskip=\skip48
+\c@subfigure=\count115
+\c@subfigure@save=\count116
+\c@lofdepth=\count117
+\c@subtable=\count118
+\c@subtable@save=\count119
+\c@lotdepth=\count120
+\sf@top=\skip49
+\sf@bottom=\skip50
+)
 
 LaTeX Warning: Unused global option(s):
     [UTF8].
@@ -267,18 +284,18 @@ LaTeX Warning: Unused global option(s):
 (./writeup.aux)
 \openout1 = `writeup.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -316,20 +333,21 @@ LaTeX Font Info:    ... okay on input line 12.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count114
-\scratchdimen=\dimen133
+\scratchcounter=\count121
+\scratchdimen=\dimen134
 \scratchbox=\box32
-\nofMPsegments=\count115
-\nofMParguments=\count116
+\nofMPsegments=\count122
+\nofMParguments=\count123
 \everyMPshowfont=\toks24
-\MPscratchCnt=\count117
-\MPscratchDim=\dimen134
-\MPnumerator=\count118
-\makeMPintoPDFobject=\count119
+\MPscratchCnt=\count124
+\MPscratchDim=\dimen135
+\MPnumerator=\count125
+\makeMPintoPDFobject=\count126
 \everyMPtoPDFconversion=\toks25
 )
-\c@lstlisting=\count120
+\c@lstlisting=\count127
 Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: subfig package v1.3 is loaded.
 Package caption Info: End \AtBeginDocument code.
  [1
 
@@ -388,29 +406,220 @@ put line 48.
 (pdftex.def)             Requested size: 144.54pt x 109.58685pt.
  [3 <./images/fully_connected_graph-eps-converted-to.pdf> <./images/single_solu
 tion-eps-converted-to.pdf>]
-[4]) (./complexity.tex [5] [6]) [7] (./writeup.aux) ) 
+[4]) (./complexity.tex [5] [6]) (./results.tex
+<images/50/vis_2.pdf, id=53, 392.2865pt x 450.2421pt>
+File: images/50/vis_2.pdf Graphic file (type pdf)
+
+<use images/50/vis_2.pdf>
+Package pdftex.def Info: images/50/vis_2.pdf used on input line 6.
+(pdftex.def)             Requested size: 54.2025pt x 62.20905pt.
+
+<images/50/vis_8.pdf, id=54, 392.2865pt x 450.2421pt>
+File: images/50/vis_8.pdf Graphic file (type pdf)
+
+<use images/50/vis_8.pdf>
+Package pdftex.def Info: images/50/vis_8.pdf used on input line 7.
+(pdftex.def)             Requested size: 54.2025pt x 62.20905pt.
+
+<images/50/vis_14.pdf, id=55, 392.2865pt x 450.2421pt>
+File: images/50/vis_14.pdf Graphic file (type pdf)
+
+<use images/50/vis_14.pdf>
+Package pdftex.def Info: images/50/vis_14.pdf used on input line 8.
+(pdftex.def)             Requested size: 54.2025pt x 62.20905pt.
+
+<images/50/vis_20.pdf, id=56, 392.2865pt x 450.2421pt>
+File: images/50/vis_20.pdf Graphic file (type pdf)
+
+<use images/50/vis_20.pdf>
+Package pdftex.def Info: images/50/vis_20.pdf used on input line 9.
+(pdftex.def)             Requested size: 54.2025pt x 62.20905pt.
+
+<images/50/vis_26.pdf, id=57, 392.2865pt x 450.2421pt>
+File: images/50/vis_26.pdf Graphic file (type pdf)
+
+<use images/50/vis_26.pdf>
+Package pdftex.def Info: images/50/vis_26.pdf used on input line 10.
+(pdftex.def)             Requested size: 54.2025pt x 62.20905pt.
+
+<images/50/vis_32.pdf, id=58, 392.2865pt x 450.2421pt>
+File: images/50/vis_32.pdf Graphic file (type pdf)
+
+<use images/50/vis_32.pdf>
+Package pdftex.def Info: images/50/vis_32.pdf used on input line 11.
+(pdftex.def)             Requested size: 54.2025pt x 62.20905pt.
+
+<images/50/vis_38.pdf, id=59, 392.2865pt x 450.2421pt>
+File: images/50/vis_38.pdf Graphic file (type pdf)
+
+<use images/50/vis_38.pdf>
+Package pdftex.def Info: images/50/vis_38.pdf used on input line 12.
+(pdftex.def)             Requested size: 54.2025pt x 62.20905pt.
+
+<images/50/vis_46.pdf, id=60, 392.2865pt x 450.2421pt>
+File: images/50/vis_46.pdf Graphic file (type pdf)
+
+<use images/50/vis_46.pdf>
+Package pdftex.def Info: images/50/vis_46.pdf used on input line 13.
+(pdftex.def)             Requested size: 54.2025pt x 62.20905pt.
+
+<images/50/vis_54.pdf, id=61, 392.2865pt x 450.2421pt>
+File: images/50/vis_54.pdf Graphic file (type pdf)
+
+<use images/50/vis_54.pdf>
+Package pdftex.def Info: images/50/vis_54.pdf used on input line 14.
+(pdftex.def)             Requested size: 54.2025pt x 62.20905pt.
+
+<images/50/vis_62.pdf, id=62, 392.2865pt x 450.2421pt>
+File: images/50/vis_62.pdf Graphic file (type pdf)
+
+<use images/50/vis_62.pdf>
+Package pdftex.def Info: images/50/vis_62.pdf used on input line 15.
+(pdftex.def)             Requested size: 54.2025pt x 62.20905pt.
+
+<images/50/vis_70.pdf, id=63, 392.2865pt x 450.2421pt>
+File: images/50/vis_70.pdf Graphic file (type pdf)
+
+<use images/50/vis_70.pdf>
+Package pdftex.def Info: images/50/vis_70.pdf used on input line 16.
+(pdftex.def)             Requested size: 54.2025pt x 62.20905pt.
+
+<images/50/vis_78.pdf, id=64, 392.2865pt x 450.2421pt>
+File: images/50/vis_78.pdf Graphic file (type pdf)
+
+<use images/50/vis_78.pdf>
+Package pdftex.def Info: images/50/vis_78.pdf used on input line 17.
+(pdftex.def)             Requested size: 54.2025pt x 62.20905pt.
+
+<images/50/vis_86.pdf, id=65, 392.2865pt x 450.2421pt>
+File: images/50/vis_86.pdf Graphic file (type pdf)
+
+<use images/50/vis_86.pdf>
+Package pdftex.def Info: images/50/vis_86.pdf used on input line 18.
+(pdftex.def)             Requested size: 54.2025pt x 62.20905pt.
+
+<images/50/vis_94.pdf, id=66, 392.2865pt x 450.2421pt>
+File: images/50/vis_94.pdf Graphic file (type pdf)
+
+<use images/50/vis_94.pdf>
+Package pdftex.def Info: images/50/vis_94.pdf used on input line 19.
+(pdftex.def)             Requested size: 54.2025pt x 62.20905pt.
+
+<images/50/vis_108.pdf, id=67, 392.2865pt x 450.2421pt>
+File: images/50/vis_108.pdf Graphic file (type pdf)
+
+<use images/50/vis_108.pdf>
+Package pdftex.def Info: images/50/vis_108.pdf used on input line 20.
+(pdftex.def)             Requested size: 54.2025pt x 62.20905pt.
+
+<images/50/vis_116.pdf, id=68, 392.2865pt x 450.2421pt>
+File: images/50/vis_116.pdf Graphic file (type pdf)
+
+<use images/50/vis_116.pdf>
+Package pdftex.def Info: images/50/vis_116.pdf used on input line 21.
+(pdftex.def)             Requested size: 54.2025pt x 62.20905pt.
+
+<images/50/vis_124.pdf, id=69, 392.2865pt x 450.2421pt>
+File: images/50/vis_124.pdf Graphic file (type pdf)
+
+<use images/50/vis_124.pdf>
+Package pdftex.def Info: images/50/vis_124.pdf used on input line 22.
+(pdftex.def)             Requested size: 54.2025pt x 62.20905pt.
+
+<images/50/graph_139.pdf, id=70, 892.85994pt x 532.27734pt>
+File: images/50/graph_139.pdf Graphic file (type pdf)
+
+<use images/50/graph_139.pdf>
+Package pdftex.def Info: images/50/graph_139.pdf used on input line 29.
+(pdftex.def)             Requested size: 433.62pt x 258.50345pt.
+ [7 <./images/50/vis_2.pdf> <./images/50/vis_8.pdf
+
+pdfTeX warning: pdflatex (file ./images/50/vis_8.pdf): PDF inclusion: multiple 
+pdfs with page group included in a single page
+> <./images/50/vis_14.pdf
+
+pdfTeX warning: pdflatex (file ./images/50/vis_14.pdf): PDF inclusion: multiple
+ pdfs with page group included in a single page
+> <./images/50/vis_20.pdf
+
+pdfTeX warning: pdflatex (file ./images/50/vis_20.pdf): PDF inclusion: multiple
+ pdfs with page group included in a single page
+> <./images/50/vis_26.pdf
+
+pdfTeX warning: pdflatex (file ./images/50/vis_26.pdf): PDF inclusion: multiple
+ pdfs with page group included in a single page
+> <./images/50/vis_32.pdf
+
+pdfTeX warning: pdflatex (file ./images/50/vis_32.pdf): PDF inclusion: multiple
+ pdfs with page group included in a single page
+> <./images/50/vis_38.pdf
+
+pdfTeX warning: pdflatex (file ./images/50/vis_38.pdf): PDF inclusion: multiple
+ pdfs with page group included in a single page
+> <./images/50/vis_46.pdf
+
+pdfTeX warning: pdflatex (file ./images/50/vis_46.pdf): PDF inclusion: multiple
+ pdfs with page group included in a single page
+> <./images/50/vis_54.pdf
+
+pdfTeX warning: pdflatex (file ./images/50/vis_54.pdf): PDF inclusion: multiple
+ pdfs with page group included in a single page
+> <./images/50/vis_62.pdf
+
+pdfTeX warning: pdflatex (file ./images/50/vis_62.pdf): PDF inclusion: multiple
+ pdfs with page group included in a single page
+> <./images/50/vis_70.pdf
+
+pdfTeX warning: pdflatex (file ./images/50/vis_70.pdf): PDF inclusion: multiple
+ pdfs with page group included in a single page
+> <./images/50/vis_78.pdf
+
+pdfTeX warning: pdflatex (file ./images/50/vis_78.pdf): PDF inclusion: multiple
+ pdfs with page group included in a single page
+> <./images/50/vis_86.pdf
+
+pdfTeX warning: pdflatex (file ./images/50/vis_86.pdf): PDF inclusion: multiple
+ pdfs with page group included in a single page
+> <./images/50/vis_94.pdf
+
+pdfTeX warning: pdflatex (file ./images/50/vis_94.pdf): PDF inclusion: multiple
+ pdfs with page group included in a single page
+> <./images/50/vis_108.pdf
+
+pdfTeX warning: pdflatex (file ./images/50/vis_108.pdf): PDF inclusion: multipl
+e pdfs with page group included in a single page
+> <./images/50/vis_116.pdf
+
+pdfTeX warning: pdflatex (file ./images/50/vis_116.pdf): PDF inclusion: multipl
+e pdfs with page group included in a single page
+> <./images/50/vis_124.pdf
+
+pdfTeX warning: pdflatex (file ./images/50/vis_124.pdf): PDF inclusion: multipl
+e pdfs with page group included in a single page
+>]) [8 <./images/50/graph_139.pdf>] (./writeup.aux) ) 
 Here is how much of TeX's memory you used:
- 5966 strings out of 493029
- 86092 string characters out of 6136234
- 360705 words of memory out of 5000000
- 9429 multiletter control sequences out of 15000+600000
+ 6208 strings out of 493029
+ 90514 string characters out of 6136234
+ 363801 words of memory out of 5000000
+ 9645 multiletter control sequences out of 15000+600000
  10172 words of font info for 38 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 42i,17n,48p,725b,1452s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 44i,17n,49p,725b,1452s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-
 dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/f
 onts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/t
 ype1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
 blic/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
 sfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
-cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl
-tt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.p
-fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></u
-sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb>
-Output written on writeup.pdf (8 pages, 160969 bytes).
+cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8
+.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsltt10.pfb
+></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr
+/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share
+/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb>
+Output written on writeup.pdf (9 pages, 396810 bytes).
 PDF statistics:
- 89 PDF objects out of 1000 (max. 8388607)
- 56 compressed objects within 1 object stream
+ 812 PDF objects out of 1000 (max. 8388607)
+ 153 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 11 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 101 words of extra memory for PDF output out of 10000 (max. 10000000)
 
