@@ -1,23 +1,23 @@
-\contentsline {section}{\numberline {0.1}Summary}{2}
-\contentsline {section}{\numberline {0.2}History of the Genetic Algorithm}{2}
-\contentsline {section}{\numberline {0.3}The Traveling Salesman Problem}{2}
-\contentsline {section}{\numberline {0.4}Genetic Algorithm Function}{2}
-\contentsline {section}{\numberline {0.5}Genetic Algorithm Implementation in Python}{2}
-\contentsline {subsection}{\numberline {0.5.1}The Basics}{2}
-\contentsline {subsection}{\numberline {0.5.2}Creating the First Generation}{4}
-\contentsline {subsection}{\numberline {0.5.3}Selection}{4}
-\contentsline {subsection}{\numberline {0.5.4}Crossing Over}{5}
-\contentsline {subsection}{\numberline {0.5.5}Mutation}{5}
-\contentsline {section}{\numberline {0.6}Complexity Analysis}{6}
-\contentsline {subsection}{\numberline {0.6.1}Time Complexity}{6}
-\contentsline {subsection}{\numberline {0.6.2}Setup}{6}
-\contentsline {subsection}{\numberline {0.6.3}Invariant}{6}
-\contentsline {subsection}{\numberline {0.6.4}Final Step}{7}
-\contentsline {subsection}{\numberline {0.6.5}Synthesis}{7}
-\contentsline {section}{\numberline {0.7}Results}{7}
-\contentsline {subsection}{\numberline {0.7.1}50 Vertices}{7}
-\contentsline {subsection}{\numberline {0.7.2}100 Verticess}{9}
-\contentsline {subsection}{\numberline {0.7.3}Real-world Dataset}{9}
-\contentsline {subsection}{\numberline {0.7.4}Small Dataset}{10}
-\contentsline {subsection}{\numberline {0.7.5}Large Dataset}{10}
-\contentsline {subsection}{\numberline {0.7.6}Large Real-world Dataset}{10}
+\contentsline {section}{\numberline {0.1}Summary}{3}
+\contentsline {section}{\numberline {0.2}History of the Genetic Algorithm}{3}
+\contentsline {section}{\numberline {0.3}The Traveling Salesman Problem}{3}
+\contentsline {section}{\numberline {0.4}Genetic Algorithm Function}{3}
+\contentsline {section}{\numberline {0.5}Genetic Algorithm Implementation in Python}{3}
+\contentsline {subsection}{\numberline {0.5.1}The Basics}{3}
+\contentsline {subsection}{\numberline {0.5.2}Creating the First Generation}{5}
+\contentsline {subsection}{\numberline {0.5.3}Selection}{5}
+\contentsline {subsection}{\numberline {0.5.4}Crossing Over}{6}
+\contentsline {subsection}{\numberline {0.5.5}Mutation}{6}
+\contentsline {section}{\numberline {0.6}Complexity Analysis}{7}
+\contentsline {subsection}{\numberline {0.6.1}Time Complexity}{7}
+\contentsline {subsection}{\numberline {0.6.2}Setup}{7}
+\contentsline {subsection}{\numberline {0.6.3}Invariant}{7}
+\contentsline {subsection}{\numberline {0.6.4}Final Step}{8}
+\contentsline {subsection}{\numberline {0.6.5}Synthesis}{8}
+\contentsline {section}{\numberline {0.7}Results}{8}
+\contentsline {subsection}{\numberline {0.7.1}50 Vertices}{8}
+\contentsline {subsection}{\numberline {0.7.2}100 Verticess}{10}
+\contentsline {subsection}{\numberline {0.7.3}Real-world Dataset}{10}
+\contentsline {subsection}{\numberline {0.7.4}Small Dataset}{11}
+\contentsline {subsection}{\numberline {0.7.5}Large Dataset}{11}
+\contentsline {subsection}{\numberline {0.7.6}Large Real-world Dataset}{11}

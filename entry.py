@@ -2,7 +2,7 @@ from  FullyConnectedGraph import *
 from GeneticAlgorithm import *
 from Solution import *
 
-N = 100
+N = 25
 
 random_nodes = [(random.random(), random.random()) for i in range(N)]
 
@@ -136,6 +136,6 @@ nodes = [ 	# https://people.sc.fsu.edu/~jburkardt/datasets/cities/sgb128_xy.txt
 (  -5246.43, 2786.63    ),
 (  -5613.31, 2843.96    )]
 
-G = FullyConnectedGraph(nodes)
-ga = GeneticAlgorithm(G, num_chromosomes = 5000, depth=10000000, mutation_rate = .3, crossover_rate=.99)
+G = FullyConnectedGraph(random_nodes)
+ga = GeneticAlgorithm(G, num_chromosomes = 500, depth=10000000, mutation_rate = .5, crossover_rate=1)
 winner = ga.run()
