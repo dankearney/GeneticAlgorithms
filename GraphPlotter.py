@@ -48,16 +48,16 @@ class GraphPlotter:
             plt.draw()
             plt.pause(0.001)
 
-            mng = plt.get_current_fig_manager()
-            mng.resize(*mng.window.maxsize())
+            # mng = plt.get_current_fig_manager()
+            # mng.resize(*mng.window.maxsize())
 
             plt.show(block=False)
 
             # Save just the portion _inside_ the second axis's boundaries
-            extent = self.ax2.get_window_extent().transformed(self.fig.dpi_scale_trans.inverted())
+            # extent = self.ax2.get_window_extent().transformed(self.fig.dpi_scale_trans.inverted())
 
-            self.fig.savefig('figures/vis_' + str(len(self.fitnesses)) + '.pdf', bbox_inches=extent)
-            self.fig.savefig('figures/graph_' + str(len(self.fitnesses)) + '.pdf', bbox_inches='tight')
+            # self.fig.savefig('figures/vis_' + str(len(self.fitnesses)) + '.pdf', bbox_inches=extent)
+            # self.fig.savefig('figures/graph_' + str(len(self.fitnesses)) + '.pdf', bbox_inches='tight')
 
         except:
             print "Warning! Plotting failed. You will need a window manager like Ximg if running on Windows Ubuntu."

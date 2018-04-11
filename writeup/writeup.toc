@@ -15,8 +15,8 @@
 \contentsline {subsection}{\numberline {0.6.4}Final Step}{8}
 \contentsline {subsection}{\numberline {0.6.5}Synthesis}{8}
 \contentsline {section}{\numberline {0.7}Results}{8}
-\contentsline {subsection}{\numberline {0.7.1}50 Vertices}{8}
-\contentsline {subsection}{\numberline {0.7.2}100 Verticess}{10}
+\contentsline {subsection}{\numberline {0.7.1}25 Vertices}{8}
+\contentsline {subsection}{\numberline {0.7.2}100 Verticess}{9}
 \contentsline {subsection}{\numberline {0.7.3}Real-world Dataset}{10}
 \contentsline {subsection}{\numberline {0.7.4}Small Dataset}{11}
 \contentsline {subsection}{\numberline {0.7.5}Large Dataset}{11}

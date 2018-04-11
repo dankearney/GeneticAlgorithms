@@ -1,37 +1,31 @@
 \section{Results}
 
-\subsection{50 Vertices}
+\subsection{25 Vertices}
 
-When applied to a random graph with 50 vertices, the genetic algorithm finds an optimized solution after around 100 iterations, with a mutation rate of .3, a crossover rate of .99, and 500 chromosomes.
+When applied to a random graph with 25 vertices, the genetic algorithm finds a nicely optimized solution after 100 iterations, with a mutation rate of .5, a crossover rate of 1, and 100 chromosomes.
 
 \begin{figure}[H]
 \centering
 \begin{tabular}{cccccc}
-\subfloat[Step 1]{\includegraphics[width = .75in]{images/50/vis_2.pdf}} &
-\subfloat[Step 8]{\includegraphics[width = .75in]{images/50/vis_8.pdf}} &
-\subfloat[Step 14]{\includegraphics[width = .75in]{images/50/vis_14.pdf}} &
-\subfloat[Step 20]{\includegraphics[width = .75in]{images/50/vis_20.pdf}} &
-\subfloat[Step 26]{\includegraphics[width = .75in]{images/50/vis_26.pdf}} &
-\subfloat[Step 32]{\includegraphics[width = .75in]{images/50/vis_32.pdf}} \\
-\subfloat[Step 38]{\includegraphics[width = .75in]{images/50/vis_38.pdf}} &
-\subfloat[Step 46]{\includegraphics[width = .75in]{images/50/vis_46.pdf}} &
-\subfloat[Step 54]{\includegraphics[width = .75in]{images/50/vis_54.pdf}} &
-\subfloat[Step 62]{\includegraphics[width = .75in]{images/50/vis_62.pdf}} &
-\subfloat[Step 70]{\includegraphics[width = .75in]{images/50/vis_70.pdf}} &
-\subfloat[Step 78]{\includegraphics[width = .75in]{images/50/vis_78.pdf}} \\
-\subfloat[Step 86]{\includegraphics[width = .75in]{images/50/vis_86.pdf}} &
-\subfloat[Step 94]{\includegraphics[width = .75in]{images/50/vis_94.pdf}} &
-\subfloat[Step 108]{\includegraphics[width = .75in]{images/50/vis_108.pdf}} &
-\subfloat[Step 116]{\includegraphics[width = .75in]{images/50/vis_116.pdf}} &
-\subfloat[Step 124]{\includegraphics[width = .75in]{images/50/vis_124.pdf}} \\
+\subfloat[Step 2]{\includegraphics[width = .75in]{images/25/vis_2.pdf}} &
+\subfloat[Step 10]{\includegraphics[width = .75in]{images/25/vis_10.pdf}} &
+\subfloat[Step 20]{\includegraphics[width = .75in]{images/25/vis_20.pdf}} &
+\subfloat[Step 30]{\includegraphics[width = .75in]{images/25/vis_30.pdf}} &
+\subfloat[Step 40]{\includegraphics[width = .75in]{images/25/vis_40.pdf}} \\
+\subfloat[Step 50]{\includegraphics[width = .75in]{images/25/vis_50.pdf}} &
+\subfloat[Step 60]{\includegraphics[width = .75in]{images/25/vis_60.pdf}} &
+\subfloat[Step 70]{\includegraphics[width = .75in]{images/25/vis_70.pdf}} &
+\subfloat[Step 80]{\includegraphics[width = .75in]{images/25/vis_80.pdf}} &
+\subfloat[Step 90]{\includegraphics[width = .75in]{images/25/vis_90.pdf}} \\
+
 \end{tabular}
-\caption{The genetic algorithm working on an algorithm with 50 vertices.}
+\caption{The genetic algorithm working on an algorithm with 25 vertices.}
 \end{figure}
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=6in]{images/50/graph_138.pdf}
-\caption{The genetic algorithm applied to a graph of 50 random vertices, with a mutation rate of .3, a crossover rate of .99, and 500 chromosomes.}
+\includegraphics[width=6in]{images/25/graph_100.pdf}
+\caption{The genetic algorithm working on a random graph with 25 nodes after 100 iterations.}
 \label{fig:somthing}
 \end{figure}
 
@@ -39,12 +33,12 @@ For this example, the genetic algorithm begins with a random solution with fitne
 
 \subsection{100 Verticess}
 
-At 100 vertices, the algorithm takes longer to optimize, but is able to optimize from 45 distance units in the first iteration to 10.42 in the 650th generation, an improvement of 4.5x.
+At 100 vertices, the algorithm takes longer to optimize, but is able to optimize from 45 distance units in the first iteration to 10.42 in the 625th generation, an improvement of 4.5x.
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=6in]{images/100.pdf}
-\caption{The genetic algorithm applied to a graph of 100 random vertices, with a mutation rate of .3, a crossover rate of .99, and 500 chromosomes.}
+\caption{The genetic algorithm applied to a graph of 100 random vertices.}
 \label{fig:somthing}
 \end{figure}
 
