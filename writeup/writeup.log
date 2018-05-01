@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.1.29)  10 APR 2018 23:48
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.4.9)  11 APR 2018 18:52
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -374,11 +374,11 @@ LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <8> not available
 )
 (./implementation.tex [3]
 Package epstopdf Info: Source file: <images/fully_connected_graph.eps>
-(epstopdf)                    date: 2018-04-08 19:41:52
+(epstopdf)                    date: 2018-04-09 13:24:30
 (epstopdf)                    size: 14625 bytes
 (epstopdf)             Output file: <images/fully_connected_graph-eps-converted
 -to.pdf>
-(epstopdf)                    date: 2018-04-08 19:48:49
+(epstopdf)                    date: 2018-04-09 13:24:30
 (epstopdf)                    size: 10095 bytes
 (epstopdf)             Command: <repstopdf --outfile=images/fully_connected_gra
 ph-eps-converted-to.pdf images/fully_connected_graph.eps>
@@ -394,11 +394,11 @@ Package pdftex.def Info: images/fully_connected_graph-eps-converted-to.pdf used
  on input line 29.
 (pdftex.def)             Requested size: 144.54pt x 74.04028pt.
 Package epstopdf Info: Source file: <images/single_solution.eps>
-(epstopdf)                    date: 2018-04-08 20:04:01
+(epstopdf)                    date: 2018-04-09 13:24:30
 (epstopdf)                    size: 2507 bytes
 (epstopdf)             Output file: <images/single_solution-eps-converted-to.pd
 f>
-(epstopdf)                    date: 2018-04-08 20:07:05
+(epstopdf)                    date: 2018-04-09 13:24:30
 (epstopdf)                    size: 4112 bytes
 (epstopdf)             Command: <repstopdf --outfile=images/single_solution-eps
 -converted-to.pdf images/single_solution.eps>
@@ -414,222 +414,145 @@ put line 48.
  [4 <./images/fully_connected_graph-eps-converted-to.pdf> <./images/single_solu
 tion-eps-converted-to.pdf>]
 [5]) (./complexity.tex [6] [7]) (./results.tex
-<images/50/vis_2.pdf, id=56, 392.2865pt x 450.2421pt>
-File: images/50/vis_2.pdf Graphic file (type pdf)
+<images/25/vis_2.pdf, id=56, 280.52258pt x 312.7918pt>
+File: images/25/vis_2.pdf Graphic file (type pdf)
 
-<use images/50/vis_2.pdf>
-Package pdftex.def Info: images/50/vis_2.pdf used on input line 10.
-(pdftex.def)             Requested size: 54.2025pt x 62.20905pt.
+<use images/25/vis_2.pdf>
+Package pdftex.def Info: images/25/vis_2.pdf used on input line 10.
+(pdftex.def)             Requested size: 54.2025pt x 60.43335pt.
 
-<images/50/vis_8.pdf, id=57, 392.2865pt x 450.2421pt>
-File: images/50/vis_8.pdf Graphic file (type pdf)
+<images/25/vis_10.pdf, id=57, 280.52258pt x 312.7918pt>
+File: images/25/vis_10.pdf Graphic file (type pdf)
 
-<use images/50/vis_8.pdf>
-Package pdftex.def Info: images/50/vis_8.pdf used on input line 11.
-(pdftex.def)             Requested size: 54.2025pt x 62.20905pt.
+<use images/25/vis_10.pdf>
+Package pdftex.def Info: images/25/vis_10.pdf used on input line 11.
+(pdftex.def)             Requested size: 54.2025pt x 60.43335pt.
 
-<images/50/vis_14.pdf, id=58, 392.2865pt x 450.2421pt>
-File: images/50/vis_14.pdf Graphic file (type pdf)
+<images/25/vis_20.pdf, id=58, 280.52258pt x 312.7918pt>
+File: images/25/vis_20.pdf Graphic file (type pdf)
 
-<use images/50/vis_14.pdf>
-Package pdftex.def Info: images/50/vis_14.pdf used on input line 12.
-(pdftex.def)             Requested size: 54.2025pt x 62.20905pt.
+<use images/25/vis_20.pdf>
+Package pdftex.def Info: images/25/vis_20.pdf used on input line 12.
+(pdftex.def)             Requested size: 54.2025pt x 60.43335pt.
 
-<images/50/vis_20.pdf, id=59, 392.2865pt x 450.2421pt>
-File: images/50/vis_20.pdf Graphic file (type pdf)
+<images/25/vis_30.pdf, id=59, 280.52258pt x 312.7918pt>
+File: images/25/vis_30.pdf Graphic file (type pdf)
 
-<use images/50/vis_20.pdf>
-Package pdftex.def Info: images/50/vis_20.pdf used on input line 13.
-(pdftex.def)             Requested size: 54.2025pt x 62.20905pt.
+<use images/25/vis_30.pdf>
+Package pdftex.def Info: images/25/vis_30.pdf used on input line 13.
+(pdftex.def)             Requested size: 54.2025pt x 60.43335pt.
 
-<images/50/vis_26.pdf, id=60, 392.2865pt x 450.2421pt>
-File: images/50/vis_26.pdf Graphic file (type pdf)
+<images/25/vis_40.pdf, id=60, 280.52258pt x 312.7918pt>
+File: images/25/vis_40.pdf Graphic file (type pdf)
 
-<use images/50/vis_26.pdf>
-Package pdftex.def Info: images/50/vis_26.pdf used on input line 14.
-(pdftex.def)             Requested size: 54.2025pt x 62.20905pt.
+<use images/25/vis_40.pdf>
+Package pdftex.def Info: images/25/vis_40.pdf used on input line 14.
+(pdftex.def)             Requested size: 54.2025pt x 60.43335pt.
 
-<images/50/vis_32.pdf, id=61, 392.2865pt x 450.2421pt>
-File: images/50/vis_32.pdf Graphic file (type pdf)
+<images/25/vis_50.pdf, id=61, 280.52258pt x 312.7918pt>
+File: images/25/vis_50.pdf Graphic file (type pdf)
 
-<use images/50/vis_32.pdf>
-Package pdftex.def Info: images/50/vis_32.pdf used on input line 15.
-(pdftex.def)             Requested size: 54.2025pt x 62.20905pt.
+<use images/25/vis_50.pdf>
+Package pdftex.def Info: images/25/vis_50.pdf used on input line 15.
+(pdftex.def)             Requested size: 54.2025pt x 60.43335pt.
 
-<images/50/vis_38.pdf, id=62, 392.2865pt x 450.2421pt>
-File: images/50/vis_38.pdf Graphic file (type pdf)
+<images/25/vis_60.pdf, id=62, 280.52258pt x 312.7918pt>
+File: images/25/vis_60.pdf Graphic file (type pdf)
 
-<use images/50/vis_38.pdf>
-Package pdftex.def Info: images/50/vis_38.pdf used on input line 16.
-(pdftex.def)             Requested size: 54.2025pt x 62.20905pt.
+<use images/25/vis_60.pdf>
+Package pdftex.def Info: images/25/vis_60.pdf used on input line 16.
+(pdftex.def)             Requested size: 54.2025pt x 60.43335pt.
 
-<images/50/vis_46.pdf, id=63, 392.2865pt x 450.2421pt>
-File: images/50/vis_46.pdf Graphic file (type pdf)
+<images/25/vis_70.pdf, id=63, 280.52258pt x 312.7918pt>
+File: images/25/vis_70.pdf Graphic file (type pdf)
 
-<use images/50/vis_46.pdf>
-Package pdftex.def Info: images/50/vis_46.pdf used on input line 17.
-(pdftex.def)             Requested size: 54.2025pt x 62.20905pt.
+<use images/25/vis_70.pdf>
+Package pdftex.def Info: images/25/vis_70.pdf used on input line 17.
+(pdftex.def)             Requested size: 54.2025pt x 60.43335pt.
 
-<images/50/vis_54.pdf, id=64, 392.2865pt x 450.2421pt>
-File: images/50/vis_54.pdf Graphic file (type pdf)
+<images/25/vis_80.pdf, id=64, 280.52258pt x 312.7918pt>
+File: images/25/vis_80.pdf Graphic file (type pdf)
 
-<use images/50/vis_54.pdf>
-Package pdftex.def Info: images/50/vis_54.pdf used on input line 18.
-(pdftex.def)             Requested size: 54.2025pt x 62.20905pt.
+<use images/25/vis_80.pdf>
+Package pdftex.def Info: images/25/vis_80.pdf used on input line 18.
+(pdftex.def)             Requested size: 54.2025pt x 60.43335pt.
 
-<images/50/vis_62.pdf, id=65, 392.2865pt x 450.2421pt>
-File: images/50/vis_62.pdf Graphic file (type pdf)
+<images/25/vis_90.pdf, id=65, 280.52258pt x 312.7918pt>
+File: images/25/vis_90.pdf Graphic file (type pdf)
 
-<use images/50/vis_62.pdf>
-Package pdftex.def Info: images/50/vis_62.pdf used on input line 19.
-(pdftex.def)             Requested size: 54.2025pt x 62.20905pt.
+<use images/25/vis_90.pdf>
+Package pdftex.def Info: images/25/vis_90.pdf used on input line 19.
+(pdftex.def)             Requested size: 54.2025pt x 60.43335pt.
 
-<images/50/vis_70.pdf, id=66, 392.2865pt x 450.2421pt>
-File: images/50/vis_70.pdf Graphic file (type pdf)
+<images/25/graph_100.pdf, id=66, 646.97937pt x 394.82703pt>
+File: images/25/graph_100.pdf Graphic file (type pdf)
 
-<use images/50/vis_70.pdf>
-Package pdftex.def Info: images/50/vis_70.pdf used on input line 20.
-(pdftex.def)             Requested size: 54.2025pt x 62.20905pt.
+<use images/25/graph_100.pdf>
+Package pdftex.def Info: images/25/graph_100.pdf used on input line 27.
+(pdftex.def)             Requested size: 433.62pt x 264.6231pt.
+ [8 <./images/25/vis_2.pdf> <./images/25/vis_10.pdf
 
-<images/50/vis_78.pdf, id=67, 392.2865pt x 450.2421pt>
-File: images/50/vis_78.pdf Graphic file (type pdf)
+pdfTeX warning: pdflatex (file ./images/25/vis_10.pdf): PDF inclusion: multiple
+ pdfs with page group included in a single page
+> <./images/25/vis_20.pdf
 
-<use images/50/vis_78.pdf>
-Package pdftex.def Info: images/50/vis_78.pdf used on input line 21.
-(pdftex.def)             Requested size: 54.2025pt x 62.20905pt.
+pdfTeX warning: pdflatex (file ./images/25/vis_20.pdf): PDF inclusion: multiple
+ pdfs with page group included in a single page
+> <./images/25/vis_30.pdf
 
-<images/50/vis_86.pdf, id=68, 392.2865pt x 450.2421pt>
-File: images/50/vis_86.pdf Graphic file (type pdf)
+pdfTeX warning: pdflatex (file ./images/25/vis_30.pdf): PDF inclusion: multiple
+ pdfs with page group included in a single page
+> <./images/25/vis_40.pdf
 
-<use images/50/vis_86.pdf>
-Package pdftex.def Info: images/50/vis_86.pdf used on input line 22.
-(pdftex.def)             Requested size: 54.2025pt x 62.20905pt.
+pdfTeX warning: pdflatex (file ./images/25/vis_40.pdf): PDF inclusion: multiple
+ pdfs with page group included in a single page
+> <./images/25/vis_50.pdf
 
-<images/50/vis_94.pdf, id=69, 392.2865pt x 450.2421pt>
-File: images/50/vis_94.pdf Graphic file (type pdf)
+pdfTeX warning: pdflatex (file ./images/25/vis_50.pdf): PDF inclusion: multiple
+ pdfs with page group included in a single page
+> <./images/25/vis_60.pdf
 
-<use images/50/vis_94.pdf>
-Package pdftex.def Info: images/50/vis_94.pdf used on input line 23.
-(pdftex.def)             Requested size: 54.2025pt x 62.20905pt.
+pdfTeX warning: pdflatex (file ./images/25/vis_60.pdf): PDF inclusion: multiple
+ pdfs with page group included in a single page
+> <./images/25/vis_70.pdf
 
-<images/50/vis_108.pdf, id=70, 392.2865pt x 450.2421pt>
-File: images/50/vis_108.pdf Graphic file (type pdf)
+pdfTeX warning: pdflatex (file ./images/25/vis_70.pdf): PDF inclusion: multiple
+ pdfs with page group included in a single page
+> <./images/25/vis_80.pdf
 
-<use images/50/vis_108.pdf>
-Package pdftex.def Info: images/50/vis_108.pdf used on input line 24.
-(pdftex.def)             Requested size: 54.2025pt x 62.20905pt.
+pdfTeX warning: pdflatex (file ./images/25/vis_80.pdf): PDF inclusion: multiple
+ pdfs with page group included in a single page
+> <./images/25/vis_90.pdf
 
-<images/50/vis_116.pdf, id=71, 392.2865pt x 450.2421pt>
-File: images/50/vis_116.pdf Graphic file (type pdf)
-
-<use images/50/vis_116.pdf>
-Package pdftex.def Info: images/50/vis_116.pdf used on input line 25.
-(pdftex.def)             Requested size: 54.2025pt x 62.20905pt.
-
-<images/50/vis_124.pdf, id=72, 392.2865pt x 450.2421pt>
-File: images/50/vis_124.pdf Graphic file (type pdf)
-
-<use images/50/vis_124.pdf>
-Package pdftex.def Info: images/50/vis_124.pdf used on input line 26.
-(pdftex.def)             Requested size: 54.2025pt x 62.20905pt.
- [8]
-<images/50/graph_138.pdf, id=76, 892.85994pt x 532.27734pt>
-File: images/50/graph_138.pdf Graphic file (type pdf)
-
-<use images/50/graph_138.pdf>
-Package pdftex.def Info: images/50/graph_138.pdf used on input line 33.
-(pdftex.def)             Requested size: 433.62pt x 258.50345pt.
-
-<images/100.pdf, id=77, 901.26132pt x 513.91354pt>
+pdfTeX warning: pdflatex (file ./images/25/vis_90.pdf): PDF inclusion: multiple
+ pdfs with page group included in a single page
+>] <images/100.pdf, id=455, 901.26132pt x 513.91354pt>
 File: images/100.pdf Graphic file (type pdf)
  <use images/100.pdf>
-Package pdftex.def Info: images/100.pdf used on input line 46.
+Package pdftex.def Info: images/100.pdf used on input line 40.
 (pdftex.def)             Requested size: 433.62pt x 247.25598pt.
 
-[9 <./images/50/vis_2.pdf> <./images/50/vis_8.pdf
-
-pdfTeX warning: pdflatex (file ./images/50/vis_8.pdf): PDF inclusion: multiple 
-pdfs with page group included in a single page
-> <./images/50/vis_14.pdf
-
-pdfTeX warning: pdflatex (file ./images/50/vis_14.pdf): PDF inclusion: multiple
- pdfs with page group included in a single page
-> <./images/50/vis_20.pdf
-
-pdfTeX warning: pdflatex (file ./images/50/vis_20.pdf): PDF inclusion: multiple
- pdfs with page group included in a single page
-> <./images/50/vis_26.pdf
-
-pdfTeX warning: pdflatex (file ./images/50/vis_26.pdf): PDF inclusion: multiple
- pdfs with page group included in a single page
-> <./images/50/vis_32.pdf
-
-pdfTeX warning: pdflatex (file ./images/50/vis_32.pdf): PDF inclusion: multiple
- pdfs with page group included in a single page
-> <./images/50/vis_38.pdf
-
-pdfTeX warning: pdflatex (file ./images/50/vis_38.pdf): PDF inclusion: multiple
- pdfs with page group included in a single page
-> <./images/50/vis_46.pdf
-
-pdfTeX warning: pdflatex (file ./images/50/vis_46.pdf): PDF inclusion: multiple
- pdfs with page group included in a single page
-> <./images/50/vis_54.pdf
-
-pdfTeX warning: pdflatex (file ./images/50/vis_54.pdf): PDF inclusion: multiple
- pdfs with page group included in a single page
-> <./images/50/vis_62.pdf
-
-pdfTeX warning: pdflatex (file ./images/50/vis_62.pdf): PDF inclusion: multiple
- pdfs with page group included in a single page
-> <./images/50/vis_70.pdf
-
-pdfTeX warning: pdflatex (file ./images/50/vis_70.pdf): PDF inclusion: multiple
- pdfs with page group included in a single page
-> <./images/50/vis_78.pdf
-
-pdfTeX warning: pdflatex (file ./images/50/vis_78.pdf): PDF inclusion: multiple
- pdfs with page group included in a single page
-> <./images/50/vis_86.pdf
-
-pdfTeX warning: pdflatex (file ./images/50/vis_86.pdf): PDF inclusion: multiple
- pdfs with page group included in a single page
-> <./images/50/vis_94.pdf
-
-pdfTeX warning: pdflatex (file ./images/50/vis_94.pdf): PDF inclusion: multiple
- pdfs with page group included in a single page
-> <./images/50/vis_108.pdf
-
-pdfTeX warning: pdflatex (file ./images/50/vis_108.pdf): PDF inclusion: multipl
-e pdfs with page group included in a single page
-> <./images/50/vis_116.pdf
-
-pdfTeX warning: pdflatex (file ./images/50/vis_116.pdf): PDF inclusion: multipl
-e pdfs with page group included in a single page
-> <./images/50/vis_124.pdf
-
-pdfTeX warning: pdflatex (file ./images/50/vis_124.pdf): PDF inclusion: multipl
-e pdfs with page group included in a single page
-> <./images/50/graph_138.pdf
-
-pdfTeX warning: pdflatex (file ./images/50/graph_138.pdf): PDF inclusion: multi
-ple pdfs with page group included in a single page
->] <images/north_america.pdf, id=771, 910.82832pt x 513.91354pt>
+[9 <./images/25/graph_100.pdf>]
+<images/north_america.pdf, id=498, 910.82832pt x 513.91354pt>
 File: images/north_america.pdf Graphic file (type pdf)
 
 <use images/north_america.pdf>
-Package pdftex.def Info: images/north_america.pdf used on input line 57.
+Package pdftex.def Info: images/north_america.pdf used on input line 51.
 (pdftex.def)             Requested size: 433.62pt x 244.66039pt.
-) [10 <./images/100.pdf>] [11 <./images/north_america.pdf>] (./writeup.aux)
+) [10 <./images/100.pdf> <./images/north_america.pdf
+
+pdfTeX warning: pdflatex (file ./images/north_america.pdf): PDF inclusion: mult
+iple pdfs with page group included in a single page
+>] [11] (./writeup.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 6218 strings out of 493029
- 90728 string characters out of 6136234
- 363841 words of memory out of 5000000
- 9653 multiletter control sequences out of 15000+600000
+ 6183 strings out of 493029
+ 89955 string characters out of 6136235
+ 363843 words of memory out of 5000000
+ 9625 multiletter control sequences out of 15000+600000
  10172 words of font info for 38 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  44i,17n,49p,725b,1452s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -644,10 +567,10 @@ lic/amsfonts/cm/cmsltt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
 amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
 ts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
 cmtt8.pfb>
-Output written on writeup.pdf (12 pages, 455172 bytes).
+Output written on writeup.pdf (12 pages, 359344 bytes).
 PDF statistics:
- 893 PDF objects out of 1000 (max. 8388607)
- 170 compressed objects within 2 object streams
+ 620 PDF objects out of 1000 (max. 8388607)
+ 135 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 111 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 76 words of extra memory for PDF output out of 10000 (max. 10000000)
 

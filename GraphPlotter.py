@@ -13,7 +13,7 @@ class GraphPlotter:
         self.fig = plt.figure()
         self.ax = self.fig.add_subplot(122)
         self.ax2 = self.fig.add_subplot(121)
-
+        
     def populate_networkx_graph_nodes(self):
         for i in range(self.graph.num_nodes):
             self.G.add_node(i, xy=self.graph.get_node_xy(i))
@@ -26,6 +26,7 @@ class GraphPlotter:
 
     def plot(self, solution, mutation_rate, crossover_rate, generation, num_nodes, chromosomes):
         try:
+
             self.fitnesses.append(solution.fitness)
             line1, = self.ax.plot(range(len(self.fitnesses)), self.fitnesses, 'r-') # Returns a tuple of line objects, thus the comma
             self.ax.set_title('Fitness: %.2f Generation: %d\n Nodes: %d  Mutation rate: %.3f\n  Crossover rate: %.3f  Chromosomes: %d'
@@ -41,8 +42,6 @@ class GraphPlotter:
             plt.draw()
             plt.pause(0.001)
             plt.show(block=False)
-            if len(self.fitnesses) <= 1:
-                time.sleep(2)
 
         except:
             print "Warning! Plotting failed. You will need a window manager like Ximg if running on Windows Ubuntu."
