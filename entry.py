@@ -138,5 +138,9 @@ random_nodes = [(random.random(), random.random()) for i in range(N)]
 # (  -5613.31, 2843.96    )]
 
 G = FullyConnectedGraph(random_nodes)
-ga = GeneticAlgorithm(G, num_chromosomes = 100, depth=10000000, mutation_rate = .5, crossover_rate=1)
+if N > 50:
+	mutation_rate = .3
+else:
+	mutation_rate = .5
+ga = GeneticAlgorithm(G, num_chromosomes = 1000, depth=10000000, mutation_rate = mutation_rate, crossover_rate=1)
 winner = ga.run()
